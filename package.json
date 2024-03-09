@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Character Generator Project",
   "main": "server.js",
-  "engines" : {
-    "node" : "20.x"
-  },
   "directories": {
     "lib": "lib"
   },
@@ -27,6 +24,6 @@
   },
   "engines": {
     "npm": "6.14.13",
-    "node": "v14.17.3"
+    "node" : "20.x"
   }
 }
