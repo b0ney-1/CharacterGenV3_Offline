@@ -1,0 +1,26 @@
+[
+    {
+        "background": "Royalty",
+		"chance": 100
+    },
+    {
+        "background": "Noble",
+		"chance": 100
+    },
+    {
+        "background": "Commoner",
+		"chance": 100
+    },
+    {
+        "background": "Outlaw",
+		"chance": 100
+    },
+    {
+        "background": "Peasant",
+		"chance": 1000
+    },
+    {
+        "background": "Folk Hero",
+		"chance": 500
+    }
+]

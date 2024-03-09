@@ -1,0 +1,102 @@
+[
+	{
+		"src": "./assets/facial-hair/facial-hair1.png",
+		"name": "none",
+		"chance": 100
+	},
+    {
+		"src": "./assets/facial-hair/facial-hair2.png",
+		"name": "Beard",
+		"chance": 100
+	},
+    {
+		"src": "./assets/facial-hair/facial-hair3.png",
+		"name": "Beard",
+		"chance": 100
+	},
+    {
+		"src": "./assets/facial-hair/facial-hair4.png",
+		"name": "Beard",
+		"chance": 100
+	},
+	{
+		"src": "./assets/facial-hair/facial-hair5.png",
+		"name": "Chin Stubble",
+		"chance": 100
+	},
+	{
+		"src": "./assets/facial-hair/facial-hair6.png",
+		"name": "Chin Stubble",
+		"chance": 100
+	},
+	{
+		"src": "./assets/facial-hair/facial-hair7.png",
+		"name": "Chin Stubble",
+		"chance": 100
+	},
+	{
+		"src": "./assets/facial-hair/facial-hair8.png",
+		"name": "Chin Stubble",
+		"chance": 100
+	},
+	{
+		"src": "./assets/facial-hair/facial-hair9.png",
+		"name": "Chin Stubble",
+		"chance": 100
+	},
+	{
+		"src": "./assets/facial-hair/facial-hair10.png",
+		"name": "Trimmed Beard",
+		"chance": 100
+	},
+	{
+		"src": "./assets/facial-hair/facial-hair11.png",
+		"name": "Trimmed Beard",
+		"chance": 100
+	},
+	{
+		"src": "./assets/facial-hair/facial-hair12.png",
+		"name": "Trimmed Beard",
+		"chance": 100
+	},
+	{
+		"src": "./assets/facial-hair/facial-hair13.png",
+		"name": "Trimmed Beard",
+		"chance": 100
+	},
+	{
+		"src": "./assets/facial-hair/facial-hair14.png",
+		"name": "Trimmed Beard",
+		"chance": 100
+	},
+	{
+		"src": "./assets/facial-hair/facial-hair15.png",
+		"name": "Long Goatee",
+		"chance": 100
+	},
+	{
+		"src": "./assets/facial-hair/facial-hair16.png",
+		"name": "Long Goatee",
+		"chance": 100
+	}	,
+	{
+		"src": "./assets/facial-hair/facial-hair17.png",
+		"name": "Long Goatee",
+		"chance": 100
+	},
+	{
+		"src": "./assets/facial-hair/facial-hair18.png",
+		"name": "Long Goatee",
+		"chance": 100
+	},
+	{
+		"src": "./assets/facial-hair/facial-hair19.png",
+		"name": "Long Goatee",
+		"chance": 100
+	},
+	{
+		"src": "./assets/facial-hair/facial-hair20.png",
+		"name": "Long Goatee",
+		"chance": 100
+	}	
+]

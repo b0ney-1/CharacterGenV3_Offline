@@ -1,0 +1,138 @@
+[
+	{
+		"src": "./assets/weapons/bows/bow4.png",
+		"type": "Bow",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 0
+	},
+	{
+		"src": "./assets/weapons/bows/bow5.png",
+		"type": "Bow",
+		"elemental": "Earth",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/bows/bow6.png",
+		"type": "Bow",
+		"elemental": "Fire",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/bows/bow7.png",
+		"type": "Bow",
+		"elemental": "Water",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/bows/bow8.png",
+		"type": "Bow",
+		"elemental": "Curse",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/bows/bow9.png",
+		"type": "Bow",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/bows/bow10.png",
+		"type": "Bow",
+		"elemental": "Lightning",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/bows/bow11.png",
+		"type": "Bow",
+		"elemental": "Lightning",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/bows/bow12.png",
+		"type": "Bow",
+		"elemental": "Water",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/bows/bow13.png",
+		"type": "Bow",
+		"elemental": "Water",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/bows/bow14.png",
+		"type": "Bow",
+		"elemental": "Earth",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/bows/bow15.png",
+		"type": "Bow",
+		"elemental": "Earth",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 10
+	},
+	{
+		"src": "./assets/weapons/bows/bow16.png",
+		"type": "Bow",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/bows/bow17.png",
+		"type": "Short Bow",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/bows/bow18.png",
+		"type": "Short Bow",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/bows/bow19.png",
+		"type": "Long Bow",
+		"elemental": "None",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 500
+	},
+	{
+		"src": "./assets/weapons/bows/bow20.png",
+		"type": "Short Bow",
+		"elemental": "None",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 500
+	}
+]

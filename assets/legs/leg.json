@@ -1,0 +1,248 @@
+[
+	{
+		"src": "./assets/legs/legs100.png",
+		"armor": 2,
+		"name": "Hunters Pants",
+		"chance": 10
+	},
+	{
+		"src": "./assets/legs/legs101.png",
+		"armor": 2,
+		"name": "Leather Pants",
+		"chance": 10
+	},
+	{
+		"src": "./assets/legs/legs1.png",
+		"armor": 0,
+		"name": "Ragged Pants",
+		"chance": 100
+	},
+    {
+		"src": "./assets/legs/legs2.png",
+		"armor": 1,
+		"name": "Leather Pants",
+		"chance": 100
+	},
+    {
+		"src": "./assets/legs/legs3.png",
+		"armor": 1,
+		"name": "Workers Pants",
+		"chance": 100
+	},
+    {
+		"src": "./assets/legs/legs4.png",
+		"armor": 1,
+		"name": "Skirt",
+		"chance": 100
+	},
+    {
+		"src": "./assets/legs/legs5.png",
+		"armor": 1,
+		"name": "White Pants",
+		"chance": 100
+	},
+    {
+		"src": "./assets/legs/legs6.png",
+		"armor": 1,
+		"name": "Padded Pants",
+		"chance": 100
+	},
+    {
+		"src": "./assets/legs/legs7.png",
+		"armor": 1,
+		"name": "Padded Pants",
+		"chance": 100
+	},
+    {
+		"src": "./assets/legs/legs8.png",
+		"armor": 1,
+		"name": "Padded Pants",
+		"chance": 100
+	},
+    {
+		"src": "./assets/legs/legs9.png",
+		"armor": 1,
+		"name": "Padded Pants",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs10.png",
+		"armor": 1,
+		"name": "Green Pants",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs11.png",
+		"armor": 1,
+		"name": "Tan Pants",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs12.png",
+		"armor": 1,
+		"name": "Pink Pants",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs13.png",
+		"armor": 1,
+		"name": "Grey Pants",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs14.png",
+		"armor": 1,
+		"name": "Grey Pants",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs15.png",
+		"armor": 1,
+		"name": "Red Lined Pants",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs16.png",
+		"armor": 1,
+		"name": "Blue Lined Pants",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs17.png",
+		"armor": 1,
+		"name": "Green Lined Pants",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs18.png",
+		"armor": 1,
+		"name": "Purple Lined Pants",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs19.png",
+		"armor": 1,
+		"name": "Yellow Lined Pants",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs20.png",
+		"armor": 3,
+		"name": "Hunters Pants",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs21.png",
+		"armor": 2,
+		"name": "Leather Pants",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs22.png",
+		"armor": 1,
+		"name": "Blue Pants",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs23.png",
+		"armor": 1,
+		"name": "Green Pants",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs24.png",
+		"armor": 1,
+		"name": "Checked Green Pants",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs25.png",
+		"armor": 1,
+		"name": "Red Checked Pants",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs26.png",
+		"armor": 1,
+		"name": "Blue Checked Pants",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs27.png",
+		"armor": 1,
+		"name": "Tan Striped Pants",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs28.png",
+		"armor": 1,
+		"name": "Tan Studded Pants",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs29.png",
+		"armor": 1,
+		"name": "Red Studded Pants",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs30.png",
+		"armor": 2,
+		"name": "Steel Armor",
+		"chance": 10
+	},
+	{
+		"src": "./assets/legs/legs31.png",
+		"armor": 2,
+		"name": "Adamantine Armor",
+		"chance": 10
+	},
+	{
+		"src": "./assets/legs/legs32.png",
+		"armor": 2,
+		"name": "Black Steel Armor",
+		"chance": 10
+	},
+	{
+		"src": "./assets/legs/legs32.png",
+		"armor": 2,
+		"name": "Iron Armor",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs33.png",
+		"armor": 3,
+		"name": "Tan Shorts",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs34.png",
+		"armor": 3,
+		"name": "Green Shorts",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs35.png",
+		"armor": 3,
+		"name": "Blue Shorts",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs36.png",
+		"armor": 3,
+		"name": "Green Robe",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs37.png",
+		"armor": 3,
+		"name": "Leather Robe",
+		"chance": 100
+	},
+	{
+		"src": "./assets/legs/legs38.png",
+		"armor": 3,
+		"name": "Blue Robe",
+		"chance": 100
+	}
+]

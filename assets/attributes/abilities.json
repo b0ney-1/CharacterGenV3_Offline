@@ -1,0 +1,47 @@
+[
+    {
+        "ability": "Heal",
+        "damage": 0,
+        "Desription": ""
+    },
+    {
+        "ability": "Power Shot",
+        "damage": 0,
+        "Desription": ""
+    },
+    {
+        "ability": "Cure",
+        "damage": 0,
+        "Desription": ""
+    },
+    {
+        "ability": "Vine Trap",
+        "damage": 0,
+        "Desription": ""
+    },
+    {
+        "ability": "Rage", 
+        "damage": 0,
+        "Desription": ""
+    },
+    {
+        "ability": "Cloak",
+        "damage": 0,
+        "Desription": ""
+    },
+    {
+        "ability": "Summon Undead",
+        "damage": 0,
+        "Desription": ""
+    },
+    {
+        "ability": "Summon Beast",
+        "damage": 0,
+        "Desription": ""
+    },
+    {
+        "ability": "Haste",
+        "damage": 0,
+        "Desription": ""
+    }
+]

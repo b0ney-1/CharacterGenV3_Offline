@@ -1,0 +1,81 @@
+[
+    {
+        "src": "./assets/weapons/daggers/dagger1.png",
+		"type": "Dagger",
+		"elemental": "Curse",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+    {
+        "src": "./assets/weapons/daggers/dagger2.png",
+		"type": "Dagger",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+    {
+        "src": "./assets/weapons/daggers/dagger3.png",
+		"type": "Dagger",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+    {
+        "src": "./assets/weapons/daggers/dagger4.png",
+		"type": "Dagger",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+    {
+        "src": "./assets/weapons/daggers/dagger5.png",
+		"type": "Dagger",
+		"elemental": "Curse",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+    {
+        "src": "./assets/weapons/daggers/dagger6.png",
+		"type": "Dagger",
+		"elemental": "Curse",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+    {
+        "src": "./assets/weapons/daggers/dagger7.png",
+		"type": "Dagger",
+		"elemental": "Curse",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+    {
+        "src": "./assets/weapons/daggers/dagger8.png",
+		"type": "Dagger",
+		"elemental": "Curse",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },    {
+        "src": "./assets/weapons/daggers/dagger9.png",
+		"type": "Dagger",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/daggers/dagger10.png",
+		"type": "Dagger",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    }
+]

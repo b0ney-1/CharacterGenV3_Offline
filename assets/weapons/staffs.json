@@ -1,0 +1,409 @@
+[
+	{
+		"src": "./assets/weapons/staffs/staff2.png",
+		"type": "Staff",
+		"elemental": "Earth",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff3.png",
+		"type": "Staff",
+		"elemental": "Fire",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff4.png",
+		"type": "Staff",
+		"elemental": "Water",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff5.png",
+		"type": "Staff",
+		"elemental": "Lightning",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff6.png",
+		"type": "Staff",
+		"elemental": "Earth",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff7.png",
+		"type": "Staff",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff8.png",
+		"type": "Staff",
+		"elemental": "Curse",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff9.png",
+		"type": "Staff",
+		"elemental": "Curse",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff10.png",
+		"type": "Staff",
+		"elemental": "Curse",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff11.png",
+		"type": "Staff",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff12.png",
+		"type": "Staff",
+		"elemental": "Earth",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff13.png",
+		"type": "Staff",
+		"elemental": "Lightning",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff14.png",
+		"type": "Staff",
+		"elemental": "Water",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff15.png",
+		"type": "Staff",
+		"elemental": "Fire",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff16.png",
+		"type": "Staff",
+		"elemental": "Water",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff17.png",
+		"type": "Staff",
+		"elemental": "Lightning",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff18.png",
+		"type": "Staff",
+		"elemental": "Earth",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff19.png",
+		"type": "Staff",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff20.png",
+		"type": "Staff",
+		"elemental": "Curse",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff21.png",
+		"type": "Staff",
+		"elemental": "None",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 1000
+	},
+	{
+		"src": "./assets/weapons/staffs/staff22.png",
+		"type": "Staff",
+		"elemental": "None",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 1000
+	},
+	{
+		"src": "./assets/weapons/staffs/staff23.png",
+		"type": "Staff",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff24.png",
+		"type": "Staff",
+		"elemental": "Earth",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff25.png",
+		"type": "Staff",
+		"elemental": "Lightning",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff26.png",
+		"type": "Staff",
+		"elemental": "Water",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff27.png",
+		"type": "Staff",
+		"elemental": "Fire",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff51.png",
+		"type": "Staff",
+		"elemental": "Curse",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff28.png",
+		"type": "Staff",
+		"elemental": "Fire",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff29.png",
+		"type": "Staff",
+		"elemental": "Curse",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff30.png",
+		"type": "Staff",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff31.png",
+		"type": "Staff",
+		"elemental": "Earth",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff32.png",
+		"type": "Staff",
+		"elemental": "Lightning",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff33.png",
+		"type": "Staff",
+		"elemental": "Water",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff34.png",
+		"type": "Staff",
+		"elemental": "Curse",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff35.png",
+		"type": "Staff",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff36.png",
+		"type": "Staff",
+		"elemental": "Earth",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff37.png",
+		"type": "Staff",
+		"elemental": "Lightning",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff38.png",
+		"type": "Staff",
+		"elemental": "Water",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff39.png",
+		"type": "Staff",
+		"elemental": "Fire",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff40.png",
+		"type": "Staff",
+		"elemental": "Curse",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff41.png",
+		"type": "Staff",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff42.png",
+		"type": "Staff",
+		"elemental": "Earth",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff43.png",
+		"type": "Staff",
+		"elemental": "Lightning",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},{
+		"src": "./assets/weapons/staffs/staff44.png",
+		"type": "Staff",
+		"elemental": "Water",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff52.png",
+		"type": "Staff",
+		"elemental": "Fire",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff45.png",
+		"type": "Staff",
+		"elemental": "Water",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff46.png",
+		"type": "Staff",
+		"elemental": "Curse",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff47.png",
+		"type": "Staff",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff48.png",
+		"type": "Staff",
+		"elemental": "Earth",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff49.png",
+		"type": "Staff",
+		"elemental": "Lightning",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/weapons/staffs/staff50.png",
+		"type": "Staff",
+		"elemental": "Fire",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+	}
+]

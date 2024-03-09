@@ -1,0 +1,524 @@
+[
+	{
+		"src": "./assets/hair/hair100.png",
+		"name": "Steel Helmet",
+		"armor": 2,
+		"chance": 0
+	},
+	{
+		"src": "./assets/hair/hair25.png",
+		"name": "Mithril Helmet",
+		"armor": 2,
+		"chance": 0
+	},
+	{
+		"src": "./assets/hair/hair26.png",
+		"name": "Adamantine Helmet",
+		"armor": 2,
+		"chance": 0
+	},
+	{
+		"src": "./assets/hair/hair1.png",
+		"name": "Bun",
+		"armor": 0,
+		"chance": 100
+	},
+    {
+		"src": "./assets/hair/hair2.png",
+		"name": "Bun",
+		"armor": 0,
+		"chance": 100
+	},
+    {
+		"src": "./assets/hair/hair3.png",
+		"name": "Bun",
+		"armor": 0,
+		"chance": 100
+	},
+    {
+		"src": "./assets/hair/hair4.png",
+		"name": "Bun",
+		"armor": 0,
+		"chance": 100
+	},
+    {
+		"src": "./assets/hair/hair5.png",
+		"name": "Bun",
+		"armor": 0,
+		"chance": 100
+	},
+    {
+		"src": "./assets/hair/hair6.png",
+		"name": "PC Gamer",
+		"armor": 0,
+		"chance": 10
+	},
+    {
+		"src": "./assets/hair/hair7.png",
+		"name": "Short Flick",
+		"armor": 0,
+		"chance": 100
+	},
+    {
+		"src": "./assets/hair/hair8.png",
+		"name": "Short Flick",
+		"armor": 0,
+		"chance": 100
+	},
+    {
+		"src": "./assets/hair/hair9.png",
+		"name": "Short Flick",
+		"armor": 0,
+		"chance": 100
+	},
+    {
+		"src": "./assets/hair/hair10.png",
+		"name": "Short Flick",
+		"armor": 0,
+		"chance": 100
+	},
+    {
+		"src": "./assets/hair/hair11.png",
+		"name": "Short Flick",
+		"armor": 0,
+		"chance": 100
+	},
+    {
+		"src": "./assets/hair/hair12.png",
+		"name": "Long Straight",
+		"armor": 0,
+		"chance": 100
+	},
+    {
+		"src": "./assets/hair/hair13.png",
+		"name": "Long Straight",
+		"armor": 0,
+		"chance": 100
+	},
+    {
+		"src": "./assets/hair/hair14.png",
+		"name": "Dreadlocks",
+		"armor": 0,
+		"chance": 100
+	},
+    {
+		"src": "./assets/hair/hair15.png",
+		"name": "Dreadlocks",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair16.png",
+		"name": "Long Straight",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair17.png",
+		"name": "Long Straight",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair18.png",
+		"name": "Long Straight",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair19.png",
+		"name": "Long Straight",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair20.png",
+		"name": "Dreadlocks",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair21.png",
+		"name": "Dreadlocks",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair22.png",
+		"name": "Dreadlocks",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair23.png",
+		"name": "Dreadlocks",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair24.png",
+		"name": "Leather Band",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair25.png",
+		"name": "Mithril Helmet",
+		"armor": 2,
+		"chance": 0
+	},
+	{
+		"src": "./assets/hair/hair26.png",
+		"name": "Adamantine Helmet",
+		"armor": 2,
+		"chance": 0
+	},
+	{
+		"src": "./assets/hair/hair27.png",
+		"name": "Short Hair",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair28.png",
+		"name": "Short Hair",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair29.png",
+		"name": "Short Hair",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair30.png",
+		"name": "Short Hair",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair31.png",
+		"name": "Short Hair",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair32.png",
+		"name": "Short Hair",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair33.png",
+		"name": "Short Hair",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair34.png",
+		"name": "Short Tied Hair",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair35.png",
+		"name": "Short Tied Hair",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair36.png",
+		"name": "Short Tied Hair",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair37.png",
+		"name": "Short Tied Hair",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair38.png",
+		"name": "Short Tied Hair",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair39.png",
+		"name": "Short Tied Hair",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair40.png",
+		"name": "Short Tied Hair",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair41.png",
+		"name": "Long Tied Hair",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair42.png",
+		"name": "Long Tied Hair",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair43.png",
+		"name": "Long Tied Hair",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair44.png",
+		"name": "Long Tied Hair",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair45.png",
+		"name": "Long Tied Hair",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair46.png",
+		"name": "Long Tied Hair",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair47.png",
+		"name": "Long Tied Hair",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair48.png",
+		"name": "Comb Over",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair49.png",
+		"name": "Comb Over",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair50.png",
+		"name": "Comb Over",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair51.png",
+		"name": "Comb Over",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair52.png",
+		"name": "Comb Over",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair53.png",
+		"name": "Comb Over",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair54.png",
+		"name": "Comb Over",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair55.png",
+		"name": "Long Top Knot",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair56.png",
+		"name": "Long Top Knot",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair57.png",
+		"name": "Long Top Knot",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair58.png",
+		"name": "Long Top Knot",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair59.png",
+		"name": "Long Top Knot",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair60.png",
+		"name": "Long Top Knot",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair61.png",
+		"name": "Long Top Knot",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair62.png",
+		"name": "Long Ponytail",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair63.png",
+		"name": "Long Ponytail",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair64.png",
+		"name": "Long Ponytail",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair65.png",
+		"name": "Long Ponytail",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair66.png",
+		"name": "Long Ponytail",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair67.png",
+		"name": "Long Ponytail",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair68.png",
+		"name": "Long Ponytail",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair69.png",
+		"name": "Spiked Bun",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair70.png",
+		"name": "Spiked Bun",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair71.png",
+		"name": "Spiked Bun",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair72.png",
+		"name": "Spiked Bun",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair73.png",
+		"name": "Spiked Bun",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair74.png",
+		"name": "Spiked Bun",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair75.png",
+		"name": "Spiked Bun",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair76.png",
+		"name": "Troll Spike",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair77.png",
+		"name": "Troll Spike",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair78.png",
+		"name": "Troll Spike",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair79.png",
+		"name": "Troll Spike",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair80.png",
+		"name": "Troll Spike",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair81.png",
+		"name": "Troll Spike",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair82.png",
+		"name": "Troll Spike",
+		"armor": 0,
+		"chance": 100
+	},
+	{
+		"src": "./assets/hair/hair83.png",
+		"name": "Wizard Hat",
+		"armor": 0,
+		"chance": 20
+	},
+	{
+		"src": "./assets/hair/hair84.png",
+		"name": "Wizard Hat",
+		"armor": 0,
+		"chance": 20
+	}
+]

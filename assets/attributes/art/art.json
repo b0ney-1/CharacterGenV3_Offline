@@ -1,0 +1,46 @@
+[
+    {
+        "name": "HP",
+        "src": "./assets/attributes/art/HP.png"
+    },
+    {
+        "name": "AC",
+        "src": "./assets/attributes/art/AC.png"
+    },
+    {
+        "name": "STR",
+        "src": "./assets/attributes/art/str.png"
+    },
+    {
+        "name": "DEX",
+        "src": "./assets/attributes/art/dex2.png"
+    },
+    {
+        "name": "CON",
+        "src": "./assets/attributes/art/cons.png"
+    },
+    {
+        "name": "WIS",
+        "src": "./assets/attributes/art/wis2.png"
+    },
+    {
+        "name": "INT",
+        "src": "./assets/attributes/art/int.png"
+    },
+    {
+        "name": "CHA",
+        "src": "./assets/attributes/art/cha.png"
+    },
+    {
+        "name": "male",
+        "src": "./assets/attributes/art/male.png"
+    },
+    {
+        "name": "female",
+        "src": "./assets/attributes/art/female.png"
+    },
+    {
+        "name": "level",
+        "src": "./assets/attributes/art/level.png"
+    }
+]

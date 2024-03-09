@@ -1,0 +1,43 @@
+[
+	{
+		"src": "./assets/eyes/eye1.png",
+		"name": "Light Blue",
+		"chance": 100
+	},
+    {
+		"src": "./assets/eyes/eye2.png",
+		"name": "Light Green"
+		,
+		"chance": 100
+	},
+    {
+		"src": "./assets/eyes/eye3.png",
+		"name": "Light Green",
+		"chance": 100
+	},
+    {
+		"src": "./assets/eyes/eye4.png",
+		"name": "Red",
+		"chance": 100
+	},
+	{
+		"src": "./assets/eyes/eye5.png",
+		"name": "Blue",
+		"chance": 100
+	},
+	{
+		"src": "./assets/eyes/eye6.png",
+		"name": "Purple",
+		"chance": 100
+	},
+	{
+		"src": "./assets/eyes/eye7.png",
+		"name": "Green",
+		"chance": 100
+	},
+	{
+		"src": "./assets/eyes/eye8.png",
+		"name": "White",
+		"chance": 100
+	}
+]

@@ -1,0 +1,114 @@
+{
+    "description": "A Group of adventurers ready to take battle", 
+    "external_url": "", 
+    "image": "", 
+    "name": "ITsPorky",
+    "attributes": [
+        {
+            "trait_type": "Body", 
+            "value": ""
+          }, 
+          {
+            "trait_type": "Eyes", 
+            "value": ""
+          },
+          {
+            "trait_type": "Hair", 
+            "value": ""
+          },
+          {
+            "trait_type": "Facial Hair", 
+            "value": ""
+          },
+          {
+            "trait_type": "Chest", 
+            "value": ""
+          },
+          {
+            "trait_type": "Legs", 
+            "value": ""
+          },
+          {
+            "trait_type": "Weapon", 
+            "value": ""
+          },
+          {
+            "trait_type": "Weapon Elemental", 
+            "value": ""
+          },
+          {
+            "display_type": "number", 
+            "trait_type": "Health Points", 
+            "value": ""
+          },
+          {
+            "display_type": "number", 
+            "trait_type": "Armor Class", 
+            "value": ""
+          },
+          {
+            "display_type": "number", 
+            "trait_type": "Strength", 
+            "value": "",
+            "max_value": 20
+          },
+          {
+            "display_type": "number", 
+            "trait_type": "Dexterity", 
+            "value": "",
+            "max_value": 20
+          },
+          {
+            "display_type": "number", 
+            "trait_type": "Constitution", 
+            "value": "",
+            "max_value": 20
+          },
+          {
+            "display_type": "number", 
+            "trait_type": "Intelligence", 
+            "value": "",
+            "max_value": 20
+          },
+          {
+            "display_type": "number", 
+            "trait_type": "Wisdom", 
+            "value": "",
+            "max_value": 20
+          },
+          {
+            "display_type": "number", 
+            "trait_type": "Charisma", 
+            "value": "",
+            "max_value": 20
+          },
+          {
+            "trait_type": "Ability", 
+            "value": ""
+          },
+          {
+            "trait_type": "Name", 
+            "value": ""
+          },
+          {
+            "trait_type": "Sex", 
+            "value": ""
+          },
+          {
+            "trait_type": "Race", 
+            "value": ""
+          },
+          {
+            "trait_type": "Class", 
+            "value": ""
+          },
+          {
+            "trait_type": "Height", 
+            "value": ""
+          },
+          {
+            "trait_type": "Background",
+            "value": ""
+          }
+    ]
+  }

@@ -1,0 +1,230 @@
+[
+	{
+		"src": "./assets/shirts/shirt101.png",
+		"armor": 2,
+		"name": "Hunters Cape",
+		"chance": 10
+	},
+	{
+		"src": "./assets/shirts/shirt102.png",
+		"armor": 3,
+		"name": "Steel Armor",
+		"chance": 10
+	},
+	{
+		"src": "./assets/shirts/shirt1.png",
+		"armor": 0,
+		"name": "Ragged Shirt",
+		"chance": 200
+	},
+	{
+		"src": "./assets/shirts/shirt2.png",
+		"armor": 3,
+		"name": "Crystal Trimmed Armor",
+		"chance": 100
+	},
+	{
+		"src": "./assets/shirts/shirt3.png",
+		"armor": 3,
+		"name": "Crystal Trimmed Armor",
+		"chance": 100
+	},
+	{
+		"src": "./assets/shirts/shirt4.png",
+		"armor": 1,
+		"name": "Green Shirt",
+		"chance": 100
+	},
+	{
+		"src": "./assets/shirts/shirt5.png",
+		"armor": 1,
+		"name": "Jumpsuit",
+		"chance": 100
+	},
+	{
+		"src": "./assets/shirts/shirt6.png",
+		"armor": 2,
+		"name": "Mage Tunic",
+		"chance": 100
+	},
+	{
+		"src": "./assets/shirts/shirt8.png",
+		"armor": 2,
+		"name": "Mage Robes",
+		"chance": 100
+	},
+	{
+		"src": "./assets/shirts/shirt10.png",
+		"armor": 2,
+		"name": "Angel Armor",
+		"chance": 100
+	},
+	{
+		"src": "./assets/shirts/shirt12.png",
+		"armor": 0,
+		"name": "Ragged Drape",
+		"chance": 100
+	},
+	{
+		"src": "./assets/shirts/shirt16.png",
+		"armor": 2,
+		"name": "Leather Armor",
+		"chance": 100
+	},
+	{
+		"src": "./assets/shirts/shirt18.png",
+		"armor": 2,
+		"name": "Tan Shirt",
+		"chance": 100
+	},
+	{
+		"src": "./assets/shirts/shirt19.png",
+		"armor": 2,
+		"name": "Tan Shirt",
+		"chance": 100
+	},
+	{
+		"src": "./assets/shirts/shirt20.png",
+		"armor": 2,
+		"name": "Blue Cape",
+		"chance": 50
+	},
+	{
+		"src": "./assets/shirts/shirt21.png",
+		"armor": 2,
+		"name": "Green Cape",
+		"chance": 50
+	},
+	{
+		"src": "./assets/shirts/shirt22.png",
+		"armor": 2,
+		"name": "Red Cape",
+		"chance": 50
+	},
+	{
+		"src": "./assets/shirts/shirt23.png",
+		"armor": 2,
+		"name": "White Cape",
+		"chance": 50
+	},
+	{
+		"src": "./assets/shirts/shirt24.png",
+		"armor": 2,
+		"name": "Yellow Cape",
+		"chance": 50
+	},
+	{
+		"src": "./assets/shirts/shirt25.png",
+		"armor": 2,
+		"name": "Yellow/Green Cape",
+		"chance": 10
+	},
+	{
+		"src": "./assets/shirts/shirt26.png",
+		"armor": 2,
+		"name": "White/Green Cape",
+		"chance": 10
+	},
+	{
+		"src": "./assets/shirts/shirt27.png",
+		"armor": 2,
+		"name": "White/Red Cape",
+		"chance": 10
+	},
+	{
+		"src": "./assets/shirts/shirt28.png",
+		"armor": 2,
+		"name": "White/Green Cape",
+		"chance": 10
+	},
+	{
+		"src": "./assets/shirts/shirt29.png",
+		"armor": 2,
+		"name": "Yellow/Red Cape",
+		"chance": 10
+	},
+	{
+		"src": "./assets/shirts/shirt30.png",
+		"armor": 2,
+		"name": "Leather Cape",
+		"chance": 10
+	},
+	{
+		"src": "./assets/shirts/shirt31.png",
+		"armor": 2,
+		"name": "Adamantine Armor",
+		"chance": 10
+	},
+	{
+		"src": "./assets/shirts/shirt32.png",
+		"armor": 2,
+		"name": "Black Steel Armor",
+		"chance": 10
+	},
+	{
+		"src": "./assets/shirts/shirt34.png",
+		"armor": 2,
+		"name": "Black Steel Armor",
+		"chance": 10
+	},
+	{
+		"src": "./assets/shirts/shirt35.png",
+		"armor": 2,
+		"name": "Leather Armor",
+		"chance": 50
+	},
+	{
+		"src": "./assets/shirts/shirt36.png",
+		"armor": 2,
+		"name": "Bronze Armor",
+		"chance": 50
+	},
+	{
+		"src": "./assets/shirts/shirt37.png",
+		"armor": 2,
+		"name": "Linen Shirt",
+		"chance": 100
+	},
+	{
+		"src": "./assets/shirts/shirt38.png",
+		"armor": 2,
+		"name": "Workers Shirt",
+		"chance": 100
+	},
+	{
+		"src": "./assets/shirts/shirt39.png",
+		"armor": 2,
+		"name": "Workers Shirt",
+		"chance": 100
+	},
+	{
+		"src": "./assets/shirts/shirt40.png",
+		"armor": 2,
+		"name": "Workers Shirt",
+		"chance": 100
+	},
+	{
+		"src": "./assets/shirts/shirt41.png",
+		"armor": 2,
+		"name": "Workers Shirt",
+		"chance": 100
+	},
+	{
+		"src": "./assets/shirts/shirt42.png",
+		"armor": 2,
+		"name": "Workers Shirt",
+		"chance": 100
+	},
+	{
+		"src": "./assets/shirts/shirt43.png",
+		"armor": 2,
+		"name": "Workers Shirt",
+		"chance": 100
+	},
+	{
+		"src": "./assets/shirts/shirt44.png",
+		"armor": 2,
+		"name": "Bracers",
+		"chance": 50
+	}
+]

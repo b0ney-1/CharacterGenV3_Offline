@@ -1,0 +1,389 @@
+[
+    {
+        "src": "./assets/weapons/swords/sword1.png",
+		"type": "Sword",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+    {
+        "src": "./assets/weapons/swords/sword2.png",
+		"type": "Sword",
+		"elemental": "Earth",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+    {
+        "src": "./assets/weapons/swords/sword3.png",
+		"type": "Sword",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+    {
+        "src": "./assets/weapons/swords/sword4.png",
+		"type": "Sword",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+    {
+        "src": "./assets/weapons/swords/sword5.png",
+		"type": "Sword",
+		"elemental": "Curse",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+    {
+        "src": "./assets/weapons/swords/sword6.png",
+		"type": "Sword",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+    {
+        "src": "./assets/weapons/swords/sword7.png",
+		"type": "Sword",
+		"elemental": "Curse",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword8.png",
+		"type": "Katana",
+		"elemental": "None",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword9.png",
+		"type": "Sword",
+		"elemental": "Earth",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword10.png",
+		"type": "Sword",
+		"elemental": "Lightning",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword11.png",
+		"type": "Sword",
+		"elemental": "Water",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword12.png",
+		"type": "Sword",
+		"elemental": "Fire",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword13.png",
+		"type": "Rapier",
+		"elemental": "None",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword14.png",
+		"type": "Sword",
+		"elemental": "Rapier",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword15.png",
+		"type": "Great Axe",
+		"elemental": "None",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword16.png",
+		"type": "Great Axe",
+		"elemental": "Curse",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword17.png",
+		"type": "Great Axe",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },{
+        "src": "./assets/weapons/swords/sword18.png",
+		"type": "Great Axe",
+		"elemental": "Earth",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword19.png",
+		"type": "Great Axe",
+		"elemental": "Lightning",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword20.png",
+		"type": "Great Axe",
+		"elemental": "Water",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword21.png",
+		"type": "Great Axe",
+		"elemental": "Fire",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword22.png",
+		"type": "Great Axe",
+		"elemental": "None",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword23.png",
+		"type": "Great Axe",
+		"elemental": "Curse",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword24.png",
+		"type": "Great Axe",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },{
+        "src": "./assets/weapons/swords/sword25.png",
+		"type": "Great Axe",
+		"elemental": "Earth",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword26.png",
+		"type": "Great Axe",
+		"elemental": "Lightning",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword27.png",
+		"type": "Great Axe",
+		"elemental": "Water",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword28.png",
+		"type": "Great Axe",
+		"elemental": "Fire",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword29.png",
+		"type": "Great Mace",
+		"elemental": "None",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword30.png",
+		"type": "Great Mace",
+		"elemental": "Curse",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword31.png",
+		"type": "Great Mace",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },{
+        "src": "./assets/weapons/swords/sword32.png",
+		"type": "Great Mace",
+		"elemental": "Earth",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword33.png",
+		"type": "Great Mace",
+		"elemental": "Lightning",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword34.png",
+		"type": "Great Mace",
+		"elemental": "Water",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword35.png",
+		"type": "Great Mace",
+		"elemental": "Fire",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword36.png",
+		"type": "Great Saw",
+		"elemental": "None",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword37.png",
+		"type": "Great Saw",
+		"elemental": "Curse",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword38.png",
+		"type": "Great Saw",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },{
+        "src": "./assets/weapons/swords/sword39.png",
+		"type": "Great Saw",
+		"elemental": "Earth",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword40.png",
+		"type": "Great Saw",
+		"elemental": "Lightning",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword41.png",
+		"type": "Great Saw",
+		"elemental": "Water",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword42.png",
+		"type": "Great Saw",
+		"elemental": "Fire",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword43.png",
+		"type": "Great Axe",
+		"elemental": "None",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword44.png",
+		"type": "Great Axe",
+		"elemental": "Curse",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword45.png",
+		"type": "Great Axe",
+		"elemental": "Blood",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },{
+        "src": "./assets/weapons/swords/sword46.png",
+		"type": "Great Axe",
+		"elemental": "Earth",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword47.png",
+		"type": "Great Axe",
+		"elemental": "Lightning",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword48.png",
+		"type": "Great Axe",
+		"elemental": "Water",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    },
+	{
+        "src": "./assets/weapons/swords/sword49.png",
+		"type": "Great Axe",
+		"elemental": "Fire",
+		"damage": "d6",
+		"modifier": 0,
+		"chance": 100
+    }
+]

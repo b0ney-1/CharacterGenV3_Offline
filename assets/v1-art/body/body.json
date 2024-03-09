@@ -1,0 +1,262 @@
+[
+	{
+		"src": "./assets/body/body1.png",
+		"name": "Small Pointed Ear",
+		"race": "Wood Elf"
+	},
+	{
+		"src": "./assets/body/body1.png",
+		"name": "Small Pointed Ear",
+		"race": "High Elf"
+	},
+	{
+		"src": "./assets/body/body2.png",
+		"name": "No Ear",
+		"race": "Dwarf"
+	},
+	{
+		"src": "./assets/body/body2.png",
+		"name": "No Ear",
+		"race": "Human"
+	},
+	{
+		"src": "./assets/body/body2.png",
+		"name": "No Ear",
+		"race": "Halfling"
+	},
+	{
+		"src": "./assets/body/body3.png",
+		"name": "No Ear",
+		"race": "Dwarf"
+	},
+	{
+		"src": "./assets/body/body3.png",
+		"name": "No Ear",
+		"race": "Human"
+	},
+	{
+		"src": "./assets/body/body3.png",
+		"name": "No Ear",
+		"race": "Halfling"
+	},
+	{
+		"src": "./assets/body/body4.png",
+		"name": "No Ear",
+		"race": "Dwarf"
+	},
+	{
+		"src": "./assets/body/body4.png",
+		"name": "No Ear",
+		"race": "Human"
+	},
+	{
+		"src": "./assets/body/body4.png",
+		"name": "No Ear",
+		"race": "Halfling"
+	},
+	{
+		"src": "./assets/body/body6.png",
+		"name": "No Ear",
+		"race": "Orc"
+	},
+    {
+		"src": "./assets/body/body7.png",
+		"name": "Large Pointed Ear",
+		"race": "Wood Elf"
+	},
+	{
+		"src": "./assets/body/body7.png",
+		"name": "Large Pointed Ear",
+		"race": "High Elf"
+	},
+    {
+		"src": "./assets/body/body8.png",
+		"name": "Small Ear",
+		"race": "Human"
+	},
+	{
+		"src": "./assets/body/body8.png",
+		"name": "Small Ear",
+		"race": "Halfling"
+	},
+	{
+		"src": "./assets/body/body8.png",
+		"name": "Small Ear",
+		"race": "Dwarf"
+	},
+	{
+		"src": "./assets/body/body9.png",
+		"name": "Small Pointed Ear",
+		"race": "Wood Elf"
+	},
+	{
+		"src": "./assets/body/body9.png",
+		"name": "Small Pointed Ear",
+		"race": "High Elf"
+	},
+	{
+		"src": "./assets/body/body10.png",
+		"name": "Large Pointed Ear",
+		"race": "Wood Elf"
+	},
+	{
+		"src": "./assets/body/body10.png",
+		"name": "Large Pointed Ear",
+		"race": "High Elf"
+	},
+    {
+		"src": "./assets/body/body11.png",
+		"name": "Small Ear",
+		"race": "Human"
+	},
+	{
+		"src": "./assets/body/body11.png",
+		"name": "Small Ear",
+		"race": "Halfling"
+	},
+	{
+		"src": "./assets/body/body11.png",
+		"name": "Small Ear",
+		"race": "Dwarf"
+	},
+    {
+		"src": "./assets/body/body12.png",
+		"name": "Small Pointed Ear",
+		"race": "Wood Elf"
+	},
+	{
+		"src": "./assets/body/body12.png",
+		"name": "Small Pointed Ear",
+		"race": "High Elf"
+	},
+    {
+		"src": "./assets/body/body13.png",
+		"name": "Large Pointed Ear",
+		"race": "Wood Elf"
+	},
+	{
+		"src": "./assets/body/body13.png",
+		"name": "Large Pointed Ear",
+		"race": "High Elf"
+	},
+    {
+		"src": "./assets/body/body14.png",
+		"name": "Small Ear",
+		"race": "Human"
+	},
+	{
+		"src": "./assets/body/body14.png",
+		"name": "Small Ear",
+		"race": "Halfling"
+	},
+	{
+		"src": "./assets/body/body14.png",
+		"name": "Small Ear",
+		"race": "Dwarf"
+	},
+	{
+		"src": "./assets/body/body15.png",
+		"name": "Small Ear",
+		"race": "Human"
+	},
+	{
+		"src": "./assets/body/body15.png",
+		"name": "Small Ear",
+		"race": "Halfling"
+	},
+	{
+		"src": "./assets/body/body15.png",
+		"name": "Small Ear",
+		"race": "Dwarf"
+	},
+	{
+		"src": "./assets/body/body16.png",
+		"name": "Small Pointed Ear",
+		"race": "Wood Elf"
+	},
+	{
+		"src": "./assets/body/body16.png",
+		"name": "Small Pointed Ear",
+		"race": "High Elf"
+	},
+	{
+		"src": "./assets/body/body17.png",
+		"name": "Large Pointed Ear",
+		"race": "Wood Elf"
+	},
+	{
+		"src": "./assets/body/body17.png",
+		"name": "Large Pointed Ear",
+		"race": "High Elf"
+	},
+	{
+		"src": "./assets/body/body18.png",
+		"name": "Large Pointed Ear",
+		"race": "Dark Elf"
+	},
+	{
+		"src": "./assets/body/body19.png",
+		"name": "Small Pointed Ear",
+		"race": "Dark Elf"
+	},
+	{
+		"src": "./assets/body/body20.png",
+		"name": "Small Pointed Ear",
+		"race": "Dark Elf"
+	},
+	{
+		"src": "./assets/body/body21.png",
+		"name": "Large Pointed Ear",
+		"race": "Dark Elf"
+	},
+	{
+		"src": "./assets/body/body22.png",
+		"name": "Large Pointed Ear",
+		"race": "Dark Elf"
+	},
+	{
+		"src": "./assets/body/body23.png",
+		"name": "Small Pointed Ear",
+		"race": "Dark Elf"
+	},
+	{
+		"src": "./assets/body/body24.png",
+		"name": "Small Pointed Ear",
+		"race": "Dark Elf"
+	},
+	{
+		"src": "./assets/body/body25.png",
+		"name": "Large Pointed Ear",
+		"race": "Dark Elf"
+	},
+	{
+		"src": "./assets/body/body26.png",
+		"name": "Small Ear",
+		"race": "Orc"
+	},
+	{
+		"src": "./assets/body/body27.png",
+		"name": "Small Pointed Ear",
+		"race": "Orc"
+	},
+	{
+		"src": "./assets/body/body28.png",
+		"name": "Large Pointed Ear",
+		"race": "Orc"
+	},
+	{
+		"src": "./assets/body/body29.png",
+		"name": "Small Ear",
+		"race": "Orc"
+	},
+	{
+		"src": "./assets/body/body30.png",
+		"name": "Small Pointed Ear",
+		"race": "Orc"
+	},
+	{
+		"src": "./assets/body/body31.png",
+		"name": "Large Pointed Ear",
+		"race": "Orc"
+	}
+]
