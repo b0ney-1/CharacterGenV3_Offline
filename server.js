@@ -35,8 +35,8 @@ app.use("/", express.static(__dirname + "/assets/"));
 // Home URL
 // *********************************** //
 
-app.get('/', (req, res) => {
-  res.send('Server is running');
+app.get("/", (req, res) => {
+  res.send("Server is running");
 });
 
 // *********************************** //
@@ -80,6 +80,13 @@ app.get(
     }
   }
 );
+
+// Get Character Metadata Based on Seed
+app.get(`/v1/seed/:seed([a-zA-Z0-9]+)/metadata`, async (req, res) => {
+  const seed = req.params.seed;
+  res.header("Content-Type", "application/json");
+  res.send(metadata.getMetadata(0, await generator.generateRandom(seed)));
+});
 
 // Server Listen
 app.listen(port, () => {

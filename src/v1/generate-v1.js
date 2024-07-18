@@ -157,13 +157,14 @@ const generateRandom = async (seed) => {
 
 // Generate Pre-made Character
 const generateCharacter = async (id) => {
+  const seed = id;
   // Hash the seed with the SHA256 Algorithm
   let lastRand = {
     v: sha3_256(seed).slice(-64),
   };
 
   const character = specialCharacters[id];
-
+  console.log(character);
   var classVal = classes[character.class];
   var height = character.height + "cm (" + utils.toFeet(character.height) + ")";
   // Weapon Selection
