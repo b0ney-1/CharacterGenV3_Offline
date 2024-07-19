@@ -3,12 +3,20 @@ const fs = require("fs");
 const { exec, execSync } = require("child_process");
 const cliProgress = require("cli-progress");
 const path = require("path");
+const pinataSDK = require("@pinata/sdk");
+require("dotenv").config(); // Load environment variables from .env file
 
 const PORT = 3030;
 const IMAGE_DIR = "./generated_images";
-const METADATA_DIR = "./generated_metadata"; // New directory for metadata files
-const NUMBER_OF_CARDS = 10000;
+const METADATA_DIR = "./generated_metadata";
+const NUMBER_OF_CARDS = 100; // Set to 100 for testing
 const SERVER_START_COMMAND = "node server.js";
+
+// Initialize Pinata Client with API keys
+const pinata = new pinataSDK({
+  pinataApiKey: process.env.PINATA_API_KEY,
+  pinataSecretApiKey: process.env.PINATA_SECRET_API_KEY,
+});
 
 function killProcessOnPort(port) {
   try {
@@ -72,12 +80,49 @@ async function stopServer() {
   try {
     console.log("Stopping server...");
     const fetchModule = await import("node-fetch");
-    const fetch = fetchModule.default; // Use the default export
+    const fetch = fetchModule.default;
     await fetch(`http://localhost:${PORT}/stop`, { method: "POST" });
     console.log("Server stopped successfully.");
   } catch (error) {
     console.error("Failed to stop server:", error.message);
   }
+}
+
+async function uploadFilesToPinata(directory, progressBar) {
+  const files = fs.readdirSync(directory);
+
+  // Set up the progress bar
+  progressBar.start(files.length, 0);
+
+  for (const file of files) {
+    const filePath = path.join(directory, file);
+    const fileStream = fs.createReadStream(filePath);
+
+    try {
+      const options = {
+        pinataMetadata: {
+          name: file,
+          keyvalues: {
+            customKey: "customValue",
+          },
+        },
+        pinataOptions: {
+          cidVersion: 0,
+        },
+      };
+
+      const response = await pinata.pinFileToIPFS(fileStream, options);
+      // console.log(`Uploaded ${file}: ${response.IpfsHash}`);
+    } catch (error) {
+      console.error(`Error uploading ${file}:`, error);
+    }
+
+    // Update the progress bar
+    progressBar.update(progressBar.value + 1);
+  }
+
+  // Stop the progress bar
+  progressBar.stop();
 }
 
 async function generateCards() {
@@ -91,7 +136,7 @@ async function generateCards() {
     fs.mkdirSync(METADATA_DIR);
   }
 
-  // Initialize the progress bar
+  // Initialize the progress bar for card generation
   const progressBar = new cliProgress.SingleBar(
     {},
     cliProgress.Presets.shades_classic
@@ -134,6 +179,20 @@ async function generateCards() {
   progressBar.stop();
 
   console.log(`All cards and metadata files saved`);
+
+  // Initialize progress bars for upload
+  const imageUploadProgressBar = new cliProgress.SingleBar(
+    {},
+    cliProgress.Presets.shades_classic
+  );
+  const metadataUploadProgressBar = new cliProgress.SingleBar(
+    {},
+    cliProgress.Presets.shades_classic
+  );
+
+  // Upload images and metadata
+  await uploadFilesToPinata(IMAGE_DIR, imageUploadProgressBar);
+  await uploadFilesToPinata(METADATA_DIR, metadataUploadProgressBar);
 }
 
 async function main() {
@@ -142,7 +201,7 @@ async function main() {
     await startServer();
     console.log("Server started");
     await generateCards();
-    console.log("All cards generated and saved");
+    console.log("All cards generated, saved, and uploaded");
     await stopServer();
   } catch (error) {
     console.error("Error:", error.message);
