@@ -143,14 +143,14 @@ const generateRandom = async (seed) => {
   const weapon_URL = await draw_v1.getWeaponURL(1, characterData);
   characterData.weapon_url = weapon_URL;
 
-  console.log(
-    "Seed: " + seed + "\n",
-    "Name: " + characterData.name + "\n",
-    "Sex: " + characterData.sex + "\n",
-    "Race: " + characterData.race + "\n",
-    "Class: " + characterData.class + "\n",
-    "Height: " + characterData.height + "\n"
-  );
+  // console.log(
+  //   "Seed: " + seed + "\n",
+  //   "Name: " + characterData.name + "\n",
+  //   "Sex: " + characterData.sex + "\n",
+  //   "Race: " + characterData.race + "\n",
+  //   "Class: " + characterData.class + "\n",
+  //   "Height: " + characterData.height + "\n"
+  // );
 
   return characterData;
 };

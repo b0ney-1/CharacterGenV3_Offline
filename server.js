@@ -88,6 +88,12 @@ app.get(`/v1/seed/:seed([a-zA-Z0-9]+)/metadata`, async (req, res) => {
   res.send(metadata.getMetadata(0, await generator.generateRandom(seed)));
 });
 
+app.post("/stop", (req, res) => {
+  console.log("Stopping server...");
+  res.send("Server stopping...");
+  process.exit();
+});
+
 // Server Listen
 app.listen(port, () => {
   console.log(`API is listening on port ${port}`);
