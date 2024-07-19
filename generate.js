@@ -2,11 +2,12 @@ const axios = require("axios");
 const fs = require("fs");
 const { exec, execSync } = require("child_process");
 const cliProgress = require("cli-progress");
+const path = require("path");
 
 const PORT = 3030;
 const IMAGE_DIR = "./generated_images";
-const METADATA_FILE = "./generated_metadata.json";
-const NUMBER_OF_CARDS = 100;
+const METADATA_DIR = "./generated_metadata"; // New directory for metadata files
+const NUMBER_OF_CARDS = 10000;
 const SERVER_START_COMMAND = "node server.js";
 
 function killProcessOnPort(port) {
@@ -15,7 +16,6 @@ function killProcessOnPort(port) {
     let command;
 
     if (process.platform === "win32") {
-      // For Windows
       command = `netstat -ano | findstr :${port}`;
       const output = execSync(command).toString();
       const lines = output.split("\n");
@@ -28,7 +28,6 @@ function killProcessOnPort(port) {
         }
       });
     } else {
-      // For macOS/Linux
       command = `lsof -i :${port}`;
       const output = execSync(command).toString();
       const lines = output.split("\n");
@@ -87,7 +86,10 @@ async function generateCards() {
     fs.mkdirSync(IMAGE_DIR);
   }
 
-  const metadataArray = [];
+  if (!fs.existsSync(METADATA_DIR)) {
+    console.log(`Creating directory: ${METADATA_DIR}`);
+    fs.mkdirSync(METADATA_DIR);
+  }
 
   // Initialize the progress bar
   const progressBar = new cliProgress.SingleBar(
@@ -109,9 +111,14 @@ async function generateCards() {
       });
       const metadataResponse = await axios.get(metadataUrl);
 
-      const imagePath = `${IMAGE_DIR}/card_${hexValue}.png`;
+      const imagePath = path.join(IMAGE_DIR, `${hexValue}.png`);
+      const metadataPath = path.join(METADATA_DIR, `${hexValue}.json`);
+
       fs.writeFileSync(imagePath, imageResponse.data);
-      metadataArray.push(metadataResponse.data);
+      fs.writeFileSync(
+        metadataPath,
+        JSON.stringify(metadataResponse.data, null, 2)
+      );
     } catch (error) {
       console.error(
         `Failed to generate card ${i + 1}: ${hexValue}`,
@@ -126,8 +133,7 @@ async function generateCards() {
   // Stop the progress bar
   progressBar.stop();
 
-  fs.writeFileSync(METADATA_FILE, JSON.stringify(metadataArray, null, 2));
-  console.log(`Metadata for all cards saved to ${METADATA_FILE}`);
+  console.log(`All cards and metadata files saved`);
 }
 
 async function main() {
@@ -136,7 +142,7 @@ async function main() {
     await startServer();
     console.log("Server started");
     await generateCards();
-    console.log("All cards generated");
+    console.log("All cards generated and saved");
     await stopServer();
   } catch (error) {
     console.error("Error:", error.message);
