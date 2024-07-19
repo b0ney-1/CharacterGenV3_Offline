@@ -9,7 +9,7 @@ require("dotenv").config(); // Load environment variables from .env file
 const PORT = 3030;
 const IMAGE_DIR = "./generated_images";
 const METADATA_DIR = "./generated_metadata";
-const NUMBER_OF_CARDS = 100; // Set to 100 for testing
+const NUMBER_OF_CARDS = 100;
 const SERVER_START_COMMAND = "node server.js";
 
 // Initialize Pinata Client with API keys
@@ -88,37 +88,40 @@ async function stopServer() {
   }
 }
 
-async function uploadFilesToPinata(directory, progressBar) {
+async function uploadBatch(directory, batchSize, progressBar) {
   const files = fs.readdirSync(directory);
+  let index = 0;
 
-  // Set up the progress bar
-  progressBar.start(files.length, 0);
-
-  for (const file of files) {
-    const filePath = path.join(directory, file);
-    const fileStream = fs.createReadStream(filePath);
-
-    try {
+  while (index < files.length) {
+    const batch = files.slice(index, index + batchSize);
+    const uploadPromises = batch.map(async (file) => {
+      const filePath = path.join(directory, file);
+      const fileStream = fs.createReadStream(filePath);
       const options = {
         pinataMetadata: {
           name: file,
-          keyvalues: {
-            customKey: "customValue",
-          },
         },
         pinataOptions: {
           cidVersion: 0,
         },
       };
 
-      const response = await pinata.pinFileToIPFS(fileStream, options);
-      // console.log(`Uploaded ${file}: ${response.IpfsHash}`);
-    } catch (error) {
-      console.error(`Error uploading ${file}:`, error);
-    }
+      try {
+        const response = await pinata.pinFileToIPFS(fileStream, options);
+        // console.log(`Uploaded ${file}: ${response.IpfsHash}`);
+      } catch (error) {
+        console.error(`Error uploading ${file}:`, error);
+      }
+    });
+
+    // Process the batch
+    await Promise.all(uploadPromises);
 
     // Update the progress bar
-    progressBar.update(progressBar.value + 1);
+    progressBar.update(Math.min(index + batchSize, files.length));
+
+    // Move to the next batch
+    index += batchSize;
   }
 
   // Stop the progress bar
@@ -191,8 +194,11 @@ async function generateCards() {
   );
 
   // Upload images and metadata
-  await uploadFilesToPinata(IMAGE_DIR, imageUploadProgressBar);
-  await uploadFilesToPinata(METADATA_DIR, metadataUploadProgressBar);
+  imageUploadProgressBar.start(fs.readdirSync(IMAGE_DIR).length, 0);
+  await uploadBatch(IMAGE_DIR, 50, imageUploadProgressBar); // Adjust batchSize as needed
+
+  metadataUploadProgressBar.start(fs.readdirSync(METADATA_DIR).length, 0);
+  await uploadBatch(METADATA_DIR, 50, metadataUploadProgressBar); // Adjust batchSize as needed
 }
 
 async function main() {
