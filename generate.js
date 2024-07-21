@@ -9,8 +9,9 @@ require("dotenv").config(); // Load environment variables from .env file
 const PORT = 3030;
 const IMAGE_DIR = "./generated_images";
 const METADATA_DIR = "./generated_metadata";
-const NUMBER_OF_CARDS = 100;
+const NUMBER_OF_CARDS = 100; // Set this to 20000 for your actual use case
 const SERVER_START_COMMAND = "node server.js";
+const UPLOAD_BATCH_SIZE = 50; // Adjust based on your system and network
 
 // Storj S3 Gateway configuration
 const s3 = new AWS.S3({
@@ -94,17 +95,20 @@ async function stopServer() {
 }
 
 async function uploadToStorj(localPath, storjPath) {
-  const fileStream = fs.createReadStream(localPath);
-  const params = {
-    Bucket: BUCKET_NAME,
-    Key: storjPath,
-    Body: fileStream,
-  };
+  try {
+    const fileStream = fs.createReadStream(localPath);
+    const params = {
+      Bucket: BUCKET_NAME,
+      Key: storjPath,
+      Body: fileStream,
+    };
 
-  return s3
-    .upload(params)
-    .promise()
-    .then((data) => data.Location);
+    const data = await s3.upload(params).promise();
+    return data.Location;
+  } catch (error) {
+    console.error(`Error uploading file: ${error}`);
+    throw error;
+  }
 }
 
 async function generateCards() {
@@ -125,6 +129,8 @@ async function generateCards() {
   );
   progressBar.start(NUMBER_OF_CARDS, 0);
 
+  const cardPromises = [];
+
   for (let i = 0; i < NUMBER_OF_CARDS; i++) {
     const hexValue = ((Math.random() * 0xffffff) << 0)
       .toString(16)
@@ -132,30 +138,36 @@ async function generateCards() {
     const imageUrl = `http://localhost:${PORT}/v1/card/seed/${hexValue}/2x.png`;
     const metadataUrl = `http://localhost:${PORT}/v1/seed/${hexValue}/metadata`;
 
-    try {
-      const imageResponse = await axios.get(imageUrl, {
-        responseType: "arraybuffer",
-      });
-      const metadataResponse = await axios.get(metadataUrl);
+    cardPromises.push(
+      (async () => {
+        try {
+          const imageResponse = await axios.get(imageUrl, {
+            responseType: "arraybuffer",
+          });
+          const metadataResponse = await axios.get(metadataUrl);
 
-      const imagePath = path.join(IMAGE_DIR, `${hexValue}.png`);
-      const metadataPath = path.join(METADATA_DIR, `${hexValue}.json`);
+          const imagePath = path.join(IMAGE_DIR, `${hexValue}.png`);
+          const metadataPath = path.join(METADATA_DIR, `${hexValue}.json`);
 
-      fs.writeFileSync(imagePath, imageResponse.data);
-      fs.writeFileSync(
-        metadataPath,
-        JSON.stringify(metadataResponse.data, null, 2)
-      );
-    } catch (error) {
-      console.error(
-        `Failed to generate card ${i + 1}: ${hexValue}`,
-        error.message
-      );
-    }
+          fs.writeFileSync(imagePath, imageResponse.data);
+          fs.writeFileSync(
+            metadataPath,
+            JSON.stringify(metadataResponse.data, null, 2)
+          );
+        } catch (error) {
+          console.error(
+            `Failed to generate card ${i + 1}: ${hexValue}`,
+            error.message
+          );
+        }
 
-    // Update the progress bar
-    progressBar.update(i + 1);
+        // Update the progress bar
+        progressBar.update(progressBar.value + 1);
+      })()
+    );
   }
+
+  await Promise.all(cardPromises);
 
   // Stop the progress bar
   progressBar.stop();
@@ -164,13 +176,12 @@ async function generateCards() {
 }
 
 async function uploadFiles() {
-  // Initialize the progress bar for uploads
   const files = fs
     .readdirSync(IMAGE_DIR)
-    .map((file) => ({ type: "image", file }));
-  files.push(
-    ...fs.readdirSync(METADATA_DIR).map((file) => ({ type: "metadata", file }))
-  );
+    .map((file) => ({ type: "image", file }))
+    .concat(
+      fs.readdirSync(METADATA_DIR).map((file) => ({ type: "metadata", file }))
+    );
 
   const progressBar = new cliProgress.SingleBar(
     {},
@@ -178,27 +189,32 @@ async function uploadFiles() {
   );
   progressBar.start(files.length, 0);
 
-  for (const { type, file } of files) {
-    const localPath =
-      type === "image"
-        ? path.join(IMAGE_DIR, file)
-        : path.join(METADATA_DIR, file);
-    const storjPath = type === "image" ? `images/${file}` : `metadata/${file}`;
+  const uploadPromises = [];
+  for (const file of files) {
+    uploadPromises.push(
+      (async () => {
+        try {
+          const localPath =
+            file.type === "image"
+              ? path.join(IMAGE_DIR, file.file)
+              : path.join(METADATA_DIR, file.file);
+          const storjPath =
+            file.type === "image"
+              ? `images/${file.file}`
+              : `metadata/${file.file}`;
 
-    try {
-      const storjUrl = await uploadToStorj(localPath, storjPath);
-      console.log(
-        `${type === "image" ? "Image" : "Metadata"} URL: ${storjUrl}`
-      );
-    } catch (error) {
-      console.error(`Failed to upload ${type} ${file}:`, error.message);
-    }
-
-    // Update the progress bar
-    progressBar.update(progressBar.value + 1);
+          const storjUrl = await uploadToStorj(localPath, storjPath);
+          // console.log(`${file.type} uploaded: ${storjUrl}`);
+          progressBar.increment();
+        } catch (error) {
+          console.error(`Error uploading ${file.type} ${file.file}:`, error);
+          progressBar.increment(); // Increment to avoid stalling
+        }
+      })()
+    );
   }
 
-  // Stop the progress bar
+  await Promise.all(uploadPromises);
   progressBar.stop();
 
   console.log(`All files uploaded to Storj`);
