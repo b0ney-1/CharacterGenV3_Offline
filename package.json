@@ -13,7 +13,7 @@
   "author": "ITsPorky",
   "license": "ISC",
   "dependencies": {
-    "@pinata/sdk": "^2.1.0",
+    "aws-sdk": "^2.1659.0",
     "axios": "^1.7.2",
     "bignumber.js": "^9.0.1",
     "canvas": "^2.8.0",

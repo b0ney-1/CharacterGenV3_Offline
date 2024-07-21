@@ -3,7 +3,7 @@ const fs = require("fs");
 const { exec, execSync } = require("child_process");
 const cliProgress = require("cli-progress");
 const path = require("path");
-const pinataSDK = require("@pinata/sdk");
+const AWS = require("aws-sdk");
 require("dotenv").config(); // Load environment variables from .env file
 
 const PORT = 3030;
@@ -12,11 +12,16 @@ const METADATA_DIR = "./generated_metadata";
 const NUMBER_OF_CARDS = 100;
 const SERVER_START_COMMAND = "node server.js";
 
-// Initialize Pinata Client with API keys
-const pinata = new pinataSDK({
-  pinataApiKey: process.env.PINATA_API_KEY,
-  pinataSecretApiKey: process.env.PINATA_SECRET_API_KEY,
+// Storj S3 Gateway configuration
+const s3 = new AWS.S3({
+  endpoint: process.env.STORJ_ENDPOINT_URL, // Use the endpoint URL from .env file
+  accessKeyId: process.env.STORJ_ACCESS_KEY_ID,
+  secretAccessKey: process.env.STORJ_SECRET_ACCESS_KEY,
+  s3ForcePathStyle: true, // needed with minio
+  signatureVersion: "v4",
 });
+
+const BUCKET_NAME = process.env.STORJ_BUCKET_NAME;
 
 function killProcessOnPort(port) {
   try {
@@ -80,7 +85,7 @@ async function stopServer() {
   try {
     console.log("Stopping server...");
     const fetchModule = await import("node-fetch");
-    const fetch = fetchModule.default;
+    const fetch = fetchModule.default; // Use the default export
     await fetch(`http://localhost:${PORT}/stop`, { method: "POST" });
     console.log("Server stopped successfully.");
   } catch (error) {
@@ -88,44 +93,18 @@ async function stopServer() {
   }
 }
 
-async function uploadBatch(directory, batchSize, progressBar) {
-  const files = fs.readdirSync(directory);
-  let index = 0;
+async function uploadToStorj(localPath, storjPath) {
+  const fileStream = fs.createReadStream(localPath);
+  const params = {
+    Bucket: BUCKET_NAME,
+    Key: storjPath,
+    Body: fileStream,
+  };
 
-  while (index < files.length) {
-    const batch = files.slice(index, index + batchSize);
-    const uploadPromises = batch.map(async (file) => {
-      const filePath = path.join(directory, file);
-      const fileStream = fs.createReadStream(filePath);
-      const options = {
-        pinataMetadata: {
-          name: file,
-        },
-        pinataOptions: {
-          cidVersion: 0,
-        },
-      };
-
-      try {
-        const response = await pinata.pinFileToIPFS(fileStream, options);
-        // console.log(`Uploaded ${file}: ${response.IpfsHash}`);
-      } catch (error) {
-        console.error(`Error uploading ${file}:`, error);
-      }
-    });
-
-    // Process the batch
-    await Promise.all(uploadPromises);
-
-    // Update the progress bar
-    progressBar.update(Math.min(index + batchSize, files.length));
-
-    // Move to the next batch
-    index += batchSize;
-  }
-
-  // Stop the progress bar
-  progressBar.stop();
+  return s3
+    .upload(params)
+    .promise()
+    .then((data) => data.Location);
 }
 
 async function generateCards() {
@@ -139,7 +118,7 @@ async function generateCards() {
     fs.mkdirSync(METADATA_DIR);
   }
 
-  // Initialize the progress bar for card generation
+  // Initialize the progress bar
   const progressBar = new cliProgress.SingleBar(
     {},
     cliProgress.Presets.shades_classic
@@ -181,24 +160,48 @@ async function generateCards() {
   // Stop the progress bar
   progressBar.stop();
 
-  console.log(`All cards and metadata files saved`);
+  console.log(`All cards and metadata files generated`);
+}
 
-  // Initialize progress bars for upload
-  const imageUploadProgressBar = new cliProgress.SingleBar(
+async function uploadFiles() {
+  // Initialize the progress bar for uploads
+  const files = fs
+    .readdirSync(IMAGE_DIR)
+    .map((file) => ({ type: "image", file }));
+  files.push(
+    ...fs.readdirSync(METADATA_DIR).map((file) => ({ type: "metadata", file }))
+  );
+
+  const progressBar = new cliProgress.SingleBar(
     {},
     cliProgress.Presets.shades_classic
   );
-  const metadataUploadProgressBar = new cliProgress.SingleBar(
-    {},
-    cliProgress.Presets.shades_classic
-  );
+  progressBar.start(files.length, 0);
 
-  // Upload images and metadata
-  imageUploadProgressBar.start(fs.readdirSync(IMAGE_DIR).length, 0);
-  await uploadBatch(IMAGE_DIR, 50, imageUploadProgressBar); // Adjust batchSize as needed
+  for (const { type, file } of files) {
+    const localPath =
+      type === "image"
+        ? path.join(IMAGE_DIR, file)
+        : path.join(METADATA_DIR, file);
+    const storjPath = type === "image" ? `images/${file}` : `metadata/${file}`;
 
-  metadataUploadProgressBar.start(fs.readdirSync(METADATA_DIR).length, 0);
-  await uploadBatch(METADATA_DIR, 50, metadataUploadProgressBar); // Adjust batchSize as needed
+    try {
+      const storjUrl = await uploadToStorj(localPath, storjPath);
+      console.log(
+        `${type === "image" ? "Image" : "Metadata"} URL: ${storjUrl}`
+      );
+    } catch (error) {
+      console.error(`Failed to upload ${type} ${file}:`, error.message);
+    }
+
+    // Update the progress bar
+    progressBar.update(progressBar.value + 1);
+  }
+
+  // Stop the progress bar
+  progressBar.stop();
+
+  console.log(`All files uploaded to Storj`);
 }
 
 async function main() {
@@ -207,8 +210,9 @@ async function main() {
     await startServer();
     console.log("Server started");
     await generateCards();
-    console.log("All cards generated, saved, and uploaded");
+    console.log("All cards generated and saved");
     await stopServer();
+    await uploadFiles();
   } catch (error) {
     console.error("Error:", error.message);
   }
