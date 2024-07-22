@@ -3,8 +3,9 @@ const fs = require("fs");
 const { execSync, exec } = require("child_process");
 const cliProgress = require("cli-progress");
 const path = require("path");
-const AWS = require("aws-sdk");
-require("dotenv").config(); // Load environment variables from .env file
+const { S3Client, PutObjectCommand } = require("@aws-sdk/client-s3");
+const { Upload } = require("@aws-sdk/lib-storage");
+require("dotenv").config();
 
 const PORT = 3030;
 const IMAGE_DIR = "./generated_images";
@@ -14,12 +15,14 @@ const SERVER_START_COMMAND = "node server.js";
 const UPLOAD_BATCH_SIZE = 100; // Adjust based on your system and network
 
 // Storj S3 Gateway configuration
-const s3 = new AWS.S3({
+const s3Client = new S3Client({
   endpoint: process.env.STORJ_ENDPOINT_URL, // Use the endpoint URL from .env file
-  accessKeyId: process.env.STORJ_ACCESS_KEY_ID,
-  secretAccessKey: process.env.STORJ_SECRET_ACCESS_KEY,
-  s3ForcePathStyle: true, // needed with minio
-  signatureVersion: "v4",
+  region: "auto", // Region must be specified
+  credentials: {
+    accessKeyId: process.env.STORJ_ACCESS_KEY_ID,
+    secretAccessKey: process.env.STORJ_SECRET_ACCESS_KEY,
+  },
+  forcePathStyle: true, // needed with minio
 });
 
 const BUCKET_NAME = process.env.STORJ_BUCKET_NAME;
@@ -93,14 +96,17 @@ async function stopServer() {
 async function uploadToStorj(localPath, storjPath) {
   try {
     const fileStream = fs.createReadStream(localPath);
-    const params = {
-      Bucket: BUCKET_NAME,
-      Key: storjPath,
-      Body: fileStream,
-      ACL: "public-read", // Set the file to be publicly readable
-    };
+    const upload = new Upload({
+      client: s3Client,
+      params: {
+        Bucket: BUCKET_NAME,
+        Key: storjPath,
+        Body: fileStream,
+        ACL: "public-read", // Set the file to be publicly readable
+      },
+    });
 
-    const data = await s3.upload(params).promise();
+    const data = await upload.done();
     return data.Location;
   } catch (error) {
     console.error(`Error uploading file: ${error}`);
@@ -184,15 +190,10 @@ async function uploadFiles() {
           type === "image" ? IMAGE_DIR : METADATA_DIR,
           file
         );
-        const storjPath = `characters/${
-          type === "image" ? "images" : "metadata"
-        }/${file}`;
+        const storjPath = `${type === "image" ? "images" : "metadata"}/${file}`;
 
         try {
           const storjUrl = await uploadToStorj(localPath, storjPath);
-          // Uncomment the following line to log uploaded URLs
-          console.log(`${type} uploaded: ${storjUrl}`);
-
           if (type === "image") {
             const hexValue = path.basename(file, path.extname(file));
             imageUrls[hexValue] = storjUrl;
@@ -209,15 +210,13 @@ async function uploadFiles() {
 
   progressBar.stop();
   console.log("All files uploaded to Storj");
-
-  // Update metadata files with the corresponding image URLs
   for (const [hexValue, imageUrl] of Object.entries(imageUrls)) {
     const metadataPath = path.join(METADATA_DIR, `${hexValue}.json`);
     if (fs.existsSync(metadataPath)) {
       const metadata = JSON.parse(fs.readFileSync(metadataPath, "utf8"));
       metadata.image_url = `${BASE_URL}images/${hexValue}.png`;
       fs.writeFileSync(metadataPath, JSON.stringify(metadata, null, 2));
-      await uploadToStorj(metadataPath, `characters/metadata/${hexValue}.json`);
+      await uploadToStorj(metadataPath, `metadata/${hexValue}.json`);
     }
   }
 }
