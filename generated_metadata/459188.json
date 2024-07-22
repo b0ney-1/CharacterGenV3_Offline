@@ -1,0 +1,72 @@
+{
+  "body": {
+    "src": "./assets/body/body2.png",
+    "name": "No Ear",
+    "race": "Halfling"
+  },
+  "eyes": {
+    "src": "./assets/eyes/eye1.png",
+    "name": "Light Blue",
+    "chance": 100
+  },
+  "hair": {
+    "src": "./assets/hair/hair33.png",
+    "name": "Short Hair",
+    "armor": 0,
+    "chance": 100
+  },
+  "chest": {
+    "src": "./assets/shirts/shirt38.png",
+    "armor": 2,
+    "name": "Workers Shirt",
+    "chance": 100
+  },
+  "legs": {
+    "src": "./assets/legs/legs34.png",
+    "armor": 3,
+    "name": "Green Shorts",
+    "chance": 100
+  },
+  "facialHair": {
+    "src": "./assets/facial-hair/facial-hair6.png",
+    "name": "Chin Stubble",
+    "chance": 100
+  },
+  "weapon": {
+    "src": "./assets/weapons/staffs/staff35.png",
+    "type": "Staff",
+    "elemental": "Blood",
+    "damage": "d6",
+    "modifier": 4,
+    "chance": 100
+  },
+  "hp": 23,
+  "ac": 15,
+  "str": 12,
+  "strModifier": "+1",
+  "dex": 8,
+  "dexModifier": "-1",
+  "con": 18,
+  "conModifier": "+4",
+  "int": 11,
+  "intModifier": "+0",
+  "wis": 15,
+  "wisModifier": "+2",
+  "cha": 14,
+  "chaModifier": "+2",
+  "coins": 382,
+  "name": "Orion Molinari",
+  "sex": "Male",
+  "race": "Halfling",
+  "class": "Wizard",
+  "height": "111cm (3'8\")",
+  "background": {
+    "background": "Peasant",
+    "chance": 1000
+  },
+  "description": "Orion Molinari is a Halfling Wizard, who has 4 sibling(s), and was born in a Swamp and rasied by a Single Mother. Orion Molinari lives in the upper Isle of Zenethia, where he lives out his days as a Peasant. Growing up he often went hunting and foraging and was taught essential survival skills.",
+  "image_url": "https://link.storjshare.io/s/jvckcktruijybqbs2esw5olt747a/characters/images/459188.png",
+  "sprite_url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAABdElEQVRYhWNgGAWjYKQDRnI0+dvK/UcX23j4EVlmsZCjCRn4OJrDHECWfiZKLPZxNGfgSp5NrhGUOQAGvs1Npb8DYMEOA1v2n6SvA1KbVjN++PydAYbxJcAQBgaMBEuRAwwMDP4bGBj8JyTGwMDAEOSg9X8NAwNjkIMWTkeQ5ABkS5buf8IgwMvJsHT/E6zyxAKKEqFzdAle+XUHrjEGOWj9X3fgGs4oItoBWIM4PB1D3ey6UJJCgWgHZPupMmT7qRJUQyogOQouXLiANTiRxR10hIgOBaKKYmKDNbVpNSPMcmIdQZQDlq7by8DAwMBw4Mo7ghXOgSvv4I6IDnJm2H7oKl71FBfFuBxBjGPJdgCXBBcGxgZSm1YTdARRURAd5MzAwMDAcODKalLcSRQgygG4fHJsxzFGKw8rkks/ZECTNDCkHEBWkyzRTJqBgYGB4dgOVDY5YMBDYNQBZKWBieuuY2WTA6gWAjo6OljLA1ijBJc+AKPudU/RC++oAAAAAElFTkSuQmCC",
+  "weapon_url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAASElEQVRYhe3WsQkAIAxE0cNxnMIZxP1Xia21CZzC/01KX1IpERHR7y0pbI/P0eOcN7U6jqnM9tIDFwAAAAAAAAAA2AElZT4lGwXyCGIgK5aIAAAAAElFTkSuQmCC",
+  "seed": "459188"
+}

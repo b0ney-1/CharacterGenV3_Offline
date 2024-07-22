@@ -1,6 +1,6 @@
 const axios = require("axios");
 const fs = require("fs");
-const { exec, execSync } = require("child_process");
+const { execSync, exec } = require("child_process");
 const cliProgress = require("cli-progress");
 const path = require("path");
 const AWS = require("aws-sdk");
@@ -9,9 +9,9 @@ require("dotenv").config(); // Load environment variables from .env file
 const PORT = 3030;
 const IMAGE_DIR = "./generated_images";
 const METADATA_DIR = "./generated_metadata";
-const NUMBER_OF_CARDS = 100; // Set this to 20000 for your actual use case
+const NUMBER_OF_CARDS = 10;
 const SERVER_START_COMMAND = "node server.js";
-const UPLOAD_BATCH_SIZE = 50; // Adjust based on your system and network
+const UPLOAD_BATCH_SIZE = 100; // Adjust based on your system and network
 
 // Storj S3 Gateway configuration
 const s3 = new AWS.S3({
@@ -23,37 +23,33 @@ const s3 = new AWS.S3({
 });
 
 const BUCKET_NAME = process.env.STORJ_BUCKET_NAME;
+const BASE_URL =
+  "https://link.storjshare.io/s/jvckcktruijybqbs2esw5olt747a/characters/images/"; // Base URL for images
 
 function killProcessOnPort(port) {
   try {
     console.log(`Checking if port ${port} is in use...`);
-    let command;
+    const command =
+      process.platform === "win32"
+        ? `netstat -ano | findstr :${port}`
+        : `lsof -i :${port}`;
+    const output = execSync(command).toString();
+    const lines = output.split("\n");
 
-    if (process.platform === "win32") {
-      command = `netstat -ano | findstr :${port}`;
-      const output = execSync(command).toString();
-      const lines = output.split("\n");
-      lines.forEach((line) => {
-        const parts = line.trim().split(/\s+/);
-        const pid = parts[parts.length - 1];
-        if (pid && !isNaN(pid)) {
-          console.log(`Killing process with PID ${pid} on port ${port}`);
-          execSync(`taskkill /PID ${pid} /F`);
-        }
-      });
-    } else {
-      command = `lsof -i :${port}`;
-      const output = execSync(command).toString();
-      const lines = output.split("\n");
-      lines.forEach((line) => {
-        const parts = line.trim().split(/\s+/);
-        const pid = parts[1];
-        if (pid && !isNaN(pid)) {
-          console.log(`Killing process with PID ${pid} on port ${port}`);
-          execSync(`kill -9 ${pid}`);
-        }
-      });
-    }
+    lines.forEach((line) => {
+      const parts = line.trim().split(/\s+/);
+      const pid =
+        process.platform === "win32" ? parts[parts.length - 1] : parts[1];
+
+      if (pid && !isNaN(pid)) {
+        console.log(`Killing process with PID ${pid} on port ${port}`);
+        const killCommand =
+          process.platform === "win32"
+            ? `taskkill /PID ${pid} /F`
+            : `kill -9 ${pid}`;
+        execSync(killCommand);
+      }
+    });
   } catch (error) {
     console.log(`No process found running on port ${port}`);
   }
@@ -101,6 +97,7 @@ async function uploadToStorj(localPath, storjPath) {
       Bucket: BUCKET_NAME,
       Key: storjPath,
       Body: fileStream,
+      ACL: "public-read", // Set the file to be publicly readable
     };
 
     const data = await s3.upload(params).promise();
@@ -112,64 +109,52 @@ async function uploadToStorj(localPath, storjPath) {
 }
 
 async function generateCards() {
-  if (!fs.existsSync(IMAGE_DIR)) {
-    console.log(`Creating directory: ${IMAGE_DIR}`);
-    fs.mkdirSync(IMAGE_DIR);
-  }
+  [IMAGE_DIR, METADATA_DIR].forEach((dir) => {
+    if (!fs.existsSync(dir)) {
+      console.log(`Creating directory: ${dir}`);
+      fs.mkdirSync(dir);
+    }
+  });
 
-  if (!fs.existsSync(METADATA_DIR)) {
-    console.log(`Creating directory: ${METADATA_DIR}`);
-    fs.mkdirSync(METADATA_DIR);
-  }
-
-  // Initialize the progress bar
   const progressBar = new cliProgress.SingleBar(
     {},
     cliProgress.Presets.shades_classic
   );
   progressBar.start(NUMBER_OF_CARDS, 0);
 
-  const cardPromises = [];
-
-  for (let i = 0; i < NUMBER_OF_CARDS; i++) {
+  const cardPromises = Array.from({ length: NUMBER_OF_CARDS }, async (_, i) => {
     const hexValue = ((Math.random() * 0xffffff) << 0)
       .toString(16)
       .padStart(6, "0");
     const imageUrl = `http://localhost:${PORT}/v1/card/seed/${hexValue}/2x.png`;
     const metadataUrl = `http://localhost:${PORT}/v1/seed/${hexValue}/metadata`;
 
-    cardPromises.push(
-      (async () => {
-        try {
-          const imageResponse = await axios.get(imageUrl, {
-            responseType: "arraybuffer",
-          });
-          const metadataResponse = await axios.get(metadataUrl);
+    try {
+      const [imageResponse, metadataResponse] = await Promise.all([
+        axios.get(imageUrl, { responseType: "arraybuffer" }),
+        axios.get(metadataUrl),
+      ]);
 
-          const imagePath = path.join(IMAGE_DIR, `${hexValue}.png`);
-          const metadataPath = path.join(METADATA_DIR, `${hexValue}.json`);
+      const imagePath = path.join(IMAGE_DIR, `${hexValue}.png`);
+      const metadataPath = path.join(METADATA_DIR, `${hexValue}.json`);
 
-          fs.writeFileSync(imagePath, imageResponse.data);
-          fs.writeFileSync(
-            metadataPath,
-            JSON.stringify(metadataResponse.data, null, 2)
-          );
-        } catch (error) {
-          console.error(
-            `Failed to generate card ${i + 1}: ${hexValue}`,
-            error.message
-          );
-        }
+      fs.writeFileSync(imagePath, imageResponse.data);
+      fs.writeFileSync(
+        metadataPath,
+        JSON.stringify(metadataResponse.data, null, 2)
+      );
 
-        // Update the progress bar
-        progressBar.update(progressBar.value + 1);
-      })()
-    );
-  }
+      progressBar.increment();
+    } catch (error) {
+      console.error(
+        `Failed to generate card ${i + 1}: ${hexValue}`,
+        error.message
+      );
+      progressBar.increment(); // Increment to avoid stalling
+    }
+  });
 
   await Promise.all(cardPromises);
-
-  // Stop the progress bar
   progressBar.stop();
 
   console.log(`All cards and metadata files generated`);
@@ -189,35 +174,50 @@ async function uploadFiles() {
   );
   progressBar.start(files.length, 0);
 
-  const uploadPromises = [];
-  for (const file of files) {
-    uploadPromises.push(
-      (async () => {
-        try {
-          const localPath =
-            file.type === "image"
-              ? path.join(IMAGE_DIR, file.file)
-              : path.join(METADATA_DIR, file.file);
-          const storjPath =
-            file.type === "image"
-              ? `images/${file.file}`
-              : `metadata/${file.file}`;
+  const imageUrls = {};
 
+  for (let i = 0; i < files.length; i += UPLOAD_BATCH_SIZE) {
+    const batch = files
+      .slice(i, i + UPLOAD_BATCH_SIZE)
+      .map(async ({ type, file }) => {
+        const localPath = path.join(
+          type === "image" ? IMAGE_DIR : METADATA_DIR,
+          file
+        );
+        const storjPath = `${type === "image" ? "images" : "metadata"}/${file}`;
+
+        try {
           const storjUrl = await uploadToStorj(localPath, storjPath);
-          // console.log(`${file.type} uploaded: ${storjUrl}`);
-          progressBar.increment();
+          // Uncomment the following line to log uploaded URLs
+          console.log(`${type} uploaded: ${storjUrl}`);
+
+          if (type === "image") {
+            const hexValue = path.basename(file, path.extname(file));
+            imageUrls[hexValue] = storjUrl;
+          }
         } catch (error) {
-          console.error(`Error uploading ${file.type} ${file.file}:`, error);
-          progressBar.increment(); // Increment to avoid stalling
+          console.error(`Error uploading ${type} ${file}:`, error.message);
+        } finally {
+          progressBar.increment();
         }
-      })()
-    );
+      });
+
+    await Promise.all(batch);
   }
 
-  await Promise.all(uploadPromises);
   progressBar.stop();
-
   console.log(`All files uploaded to Storj`);
+
+  // Update metadata files with the corresponding image URLs
+  for (const [hexValue, imageUrl] of Object.entries(imageUrls)) {
+    const metadataPath = path.join(METADATA_DIR, `${hexValue}.json`);
+    if (fs.existsSync(metadataPath)) {
+      const metadata = JSON.parse(fs.readFileSync(metadataPath, "utf8"));
+      metadata.image_url = `${BASE_URL}${hexValue}.png`;
+      fs.writeFileSync(metadataPath, JSON.stringify(metadata, null, 2));
+      await uploadToStorj(metadataPath, `metadata/${hexValue}.json`);
+    }
+  }
 }
 
 async function main() {

@@ -1,0 +1,72 @@
+{
+  "body": {
+    "src": "./assets/body/body15.png",
+    "name": "Small Ear",
+    "race": "Dwarf"
+  },
+  "eyes": {
+    "src": "./assets/eyes/eye7.png",
+    "name": "Green",
+    "chance": 100
+  },
+  "hair": {
+    "src": "./assets/hair/hair61.png",
+    "name": "Long Top Knot",
+    "armor": 0,
+    "chance": 100
+  },
+  "chest": {
+    "src": "./assets/shirts/shirt3.png",
+    "armor": 3,
+    "name": "Crystal Trimmed Armor",
+    "chance": 100
+  },
+  "legs": {
+    "src": "./assets/legs/legs5.png",
+    "armor": 1,
+    "name": "White Pants",
+    "chance": 100
+  },
+  "facialHair": {
+    "src": "./assets/facial-hair/facial-hair10.png",
+    "name": "Trimmed Beard",
+    "chance": 100
+  },
+  "weapon": {
+    "src": "./assets/weapons/daggers/dagger2.png",
+    "type": "Dagger",
+    "elemental": "Blood",
+    "damage": "d6",
+    "modifier": 2,
+    "chance": 100
+  },
+  "hp": 15,
+  "ac": 14,
+  "str": 15,
+  "strModifier": "+2",
+  "dex": 13,
+  "dexModifier": "+1",
+  "con": 12,
+  "conModifier": "+1",
+  "int": 15,
+  "intModifier": "+2",
+  "wis": 13,
+  "wisModifier": "+1",
+  "cha": 17,
+  "chaModifier": "+3",
+  "coins": 729,
+  "name": "Akibrus Walsh",
+  "sex": "Male",
+  "race": "Dwarf",
+  "class": "Rogue",
+  "height": "125cm (4'1\")",
+  "background": {
+    "background": "Peasant",
+    "chance": 1000
+  },
+  "description": "Akibrus Walsh is a Dwarf Rogue, who has 1 sibling(s), and was born in a laboratory and rasied by their extended Family. Akibrus Walsh lives in the lower Isle of Zarkus, where he lives out his days as a Peasant. Akibrus Walsh learned the dark arts of thievery when he was young, as it allowed him to earn money from pickpocketing the other locals.",
+  "image_url": "https://link.storjshare.io/s/jvckcktruijybqbs2esw5olt747a/characters/images/1633a5.png",
+  "sprite_url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAABr0lEQVRYhe2UMUvDQBTH/xckOHRU4mRxE3FK21Gxk9XFqXHwO7gISos4KQWhm1/BwSziUnQS7JpkKsWlg06CH8B6Q89B3pmmod5dS7P0v+Qd9+79f3l5F2CuuTIW00l+e94XFOfLLa2zUwcAgK/vHRmvV06NgCzdA/TmcfNJpA3w+ngtji86cn23uzxbANLZ1Q0A4PDpcyIA5e/muq64b64gX26xg61Vkdx/aL8zyouiSLnugmpiaFkonHxIs5fbcwmxfXQpzUPL0ppsZYDCYIC4STu2J4pFQfv0nDrACEyzpXXG933hed5Ic4yHEPj9LKrq9XrwfX9kdpQrpJnptjtNygBxM845OOdDsc7kGwGQoihitm3Dtm0AQDymLrmuO9TqRqMhHMdJrac0hMmCJM65NAcAFgSMcuUZ3oXjOMjlckgbQqW2UTFqM107AggtCywIWDKfAAAg6vRTvYyuIQCEYfi3KJWG9gjU3VwUsDfGzofRNayvLY1dS5BOn/03nBP9BzKTEELUqhURf84cIG6eGUAyNlHmMzAHyBzA6E9Y9/ZSYxNNrQO1asXoJvwAWXzJzHXEFmQAAAAASUVORK5CYII=",
+  "weapon_url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAAW0lEQVRYhe3TsQ3AMAhEUZLKBf0t4crDsBK7sBOzODsQJEvWvR74DSJERES3iIhdmXu7AjKzFNEWUHVHgLtvAGcC1hwbgKiqmNnzd18pYM1R+oCW40cOExFRpw9+eBJ15TcAGQAAAABJRU5ErkJggg==",
+  "seed": "1633a5"
+}
