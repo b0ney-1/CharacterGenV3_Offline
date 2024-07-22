@@ -24,7 +24,7 @@ const s3 = new AWS.S3({
 
 const BUCKET_NAME = process.env.STORJ_BUCKET_NAME;
 const BASE_URL =
-  "https://link.storjshare.io/s/jvckcktruijybqbs2esw5olt747a/characters/images/"; // Base URL for images
+  "https://link.storjshare.io/s/jvckcktruijybqbs2esw5olt747a/characters/";
 
 function killProcessOnPort(port) {
   try {
@@ -157,7 +157,30 @@ async function generateCards() {
   await Promise.all(cardPromises);
   progressBar.stop();
 
-  console.log(`All cards and metadata files generated`);
+  console.log("All cards and metadata files generated");
+}
+
+async function updateMetadataUrls() {
+  const imageFiles = fs.readdirSync(IMAGE_DIR);
+  const imageUrls = {};
+
+  // Generate image URLs for each image file
+  for (const imageFile of imageFiles) {
+    const hexValue = path.basename(imageFile, path.extname(imageFile));
+    const imageUrl = `${BASE_URL}images/${imageFile}`;
+    imageUrls[hexValue] = imageUrl;
+  }
+
+  // Update metadata files with the correct image URLs
+  for (const imageFile of imageFiles) {
+    const hexValue = path.basename(imageFile, path.extname(imageFile));
+    const metadataPath = path.join(METADATA_DIR, `${hexValue}.json`);
+    if (fs.existsSync(metadataPath)) {
+      const metadata = JSON.parse(fs.readFileSync(metadataPath, "utf8"));
+      metadata.image_url = imageUrls[hexValue]; // Update with the correct Storj URL
+      fs.writeFileSync(metadataPath, JSON.stringify(metadata, null, 2));
+    }
+  }
 }
 
 async function uploadFiles() {
@@ -168,13 +191,9 @@ async function uploadFiles() {
       fs.readdirSync(METADATA_DIR).map((file) => ({ type: "metadata", file }))
     );
 
-  const progressBar = new cliProgress.SingleBar(
-    {},
-    cliProgress.Presets.shades_classic
-  );
+  const progressBar =
+    new cli() - progress.SingleBar({}, cliProgress.Presets.shades_classic);
   progressBar.start(files.length, 0);
-
-  const imageUrls = {};
 
   for (let i = 0; i < files.length; i += UPLOAD_BATCH_SIZE) {
     const batch = files
@@ -184,17 +203,14 @@ async function uploadFiles() {
           type === "image" ? IMAGE_DIR : METADATA_DIR,
           file
         );
-        const storjPath = `${type === "image" ? "images" : "metadata"}/${file}`;
+        const storjPath = `characters/${
+          type === "image" ? "images" : "metadata"
+        }/${file}`;
 
         try {
           const storjUrl = await uploadToStorj(localPath, storjPath);
           // Uncomment the following line to log uploaded URLs
-          // console.log(`${type} uploaded: ${storjUrl}`);
-
-          if (type === "image") {
-            const hexValue = path.basename(file, path.extname(file));
-            imageUrls[hexValue] = storjUrl;
-          }
+          console.log(`${type} uploaded: ${storjUrl}`);
         } catch (error) {
           console.error(`Error uploading ${type} ${file}:`, error.message);
         } finally {
@@ -206,18 +222,7 @@ async function uploadFiles() {
   }
 
   progressBar.stop();
-  console.log(`All files uploaded to Storj`);
-
-  // Update metadata files with the corresponding image URLs
-  for (const [hexValue, imageUrl] of Object.entries(imageUrls)) {
-    const metadataPath = path.join(METADATA_DIR, `${hexValue}.json`);
-    if (fs.existsSync(metadataPath)) {
-      const metadata = JSON.parse(fs.readFileSync(metadataPath, "utf8"));
-      metadata.image_url = `${BASE_URL}${hexValue}.png`;
-      fs.writeFileSync(metadataPath, JSON.stringify(metadata, null, 2));
-      await uploadToStorj(metadataPath, `metadata/${hexValue}.json`);
-    }
-  }
+  console.log("All files uploaded to Storj");
 }
 
 async function main() {
@@ -228,7 +233,8 @@ async function main() {
     await generateCards();
     console.log("All cards generated and saved");
     await stopServer();
-    await uploadFiles();
+    await updateMetadataUrls(); // Update metadata URLs before uploading
+    await uploadFiles(); // Upload updated metadata files and images
   } catch (error) {
     console.error("Error:", error.message);
   }
