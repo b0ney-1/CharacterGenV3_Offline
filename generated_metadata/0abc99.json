@@ -1,0 +1,72 @@
+{
+  "body": {
+    "src": "./assets/body/body4.png",
+    "name": "No Ear",
+    "race": "Human"
+  },
+  "eyes": {
+    "src": "./assets/eyes/eye1.png",
+    "name": "Light Blue",
+    "chance": 100
+  },
+  "hair": {
+    "src": "./assets/hair/hair10.png",
+    "name": "Short Flick",
+    "armor": 0,
+    "chance": 100
+  },
+  "chest": {
+    "src": "./assets/shirts/shirt43.png",
+    "armor": 2,
+    "name": "Workers Shirt",
+    "chance": 100
+  },
+  "legs": {
+    "src": "./assets/legs/legs27.png",
+    "armor": 1,
+    "name": "Tan Striped Pants",
+    "chance": 100
+  },
+  "facialHair": {
+    "src": "./assets/facial-hair/facial-hair17.png",
+    "name": "Long Goatee",
+    "chance": 100
+  },
+  "weapon": {
+    "src": "./assets/weapons/swords/sword49.png",
+    "type": "Great Axe",
+    "elemental": "Fire",
+    "damage": "d6",
+    "modifier": 1,
+    "chance": 100
+  },
+  "hp": 24,
+  "ac": 13,
+  "str": 8,
+  "strModifier": "-1",
+  "dex": 9,
+  "dexModifier": "-1",
+  "con": 15,
+  "conModifier": "+2",
+  "int": 12,
+  "intModifier": "+1",
+  "wis": 11,
+  "wisModifier": "+0",
+  "cha": 10,
+  "chaModifier": "+0",
+  "coins": 834,
+  "name": "Soril Bozzelli",
+  "sex": "Male",
+  "race": "Human",
+  "class": "Knight",
+  "height": "158cm (5'2\")",
+  "background": {
+    "background": "Commoner",
+    "chance": 100
+  },
+  "description": "Soril Bozzelli is a Human Knight, who has 2 sibling(s), and was born in a Prison and rasied by a Gaurdian. Soril Bozzelli lives in the upper Isle of Zenaria, where he lives out his days as a Commoner. Soril Bozzelli learned the dark arts of thievery when he was young, as it allowed him to earn money from pickpocketing the other locals.",
+  "image_url": "https://link.storjshare.io/s/jvckcktruijybqbs2esw5olt747a/characters/images/0abc99.png",
+  "sprite_url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAABz0lEQVRYhe1WMU/CQBh9J8QFIokG4yZu1bj4C2Rw6GSMiaMRGAqLMTSk0c0NQkjRuCAro4lhdFIGXUjUxBhjnHAgMUYZDDPnQklpj3K9goPhLdfe9919797rXQ+YYIIR4GwDdFBMUZSBMQDwj6Jos83OoQBNdlsCEFbOlJfizbZz8aKuAwCKug4KtkrCCjTbQOw433vPyRqzuIGiroOqqk0JIQXMxe+XFVucACStqn19aVUFywamL8PwepW3ySnJmm0uCtCkouC8XGYWBzxYAAD5woljnABEcfgAAUELJFkjn98/iMUTIsO9EahWsrRayfYsiMUTeGx8wNw3NgLmIq1OAPNzM2h1AliLLNjiYyFgxfTSOgBgc29feA5uAqzVPdWvbXmsHTISAlLYBynsG5rjFq4t2No9Ym4pc390dZZbBa5zgFdWSdaIUdxov95uHcdwKZDK5JDK5JinnRW151Yvp1Q4HDq3p5OQg8RQ5YQI3Nw9cOVJska2oyveLySGlFL3l9tovHMRAIDL2oujbVwErN5HIosAgNPSBTlI7XRXWOcm5ZqAFWYF3KgxMgKGAkC97/nPCEwU+FcKCCEU9NNQ0E+tzyLwdCGxkhIZ9wvPW6ajXm1FiAAAAABJRU5ErkJggg==",
+  "weapon_url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAAc0lEQVRYhe3SsQ2AIBBG4YfDXg+DwFJO4QzucFYabO+MNP/XkJAA7xJAJMnMPHN+yxx28Hn9NcDBR+8AjN7DEaGA+fFbNCIUUKDU1l57tTUKlMh9YQ5uZr7kDwDPxJnJUwFfUIACFJAOOI99bUCWAkRE5AJNdyBbTt0X0gAAAABJRU5ErkJggg==",
+  "seed": "0abc99"
+}

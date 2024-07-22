@@ -1,0 +1,72 @@
+{
+  "body": {
+    "src": "./assets/body/body15.png",
+    "name": "Small Ear",
+    "race": "Halfling"
+  },
+  "eyes": {
+    "src": "./assets/eyes/eye1.png",
+    "name": "Light Blue",
+    "chance": 100
+  },
+  "hair": {
+    "src": "./assets/hair/hair40.png",
+    "name": "Short Tied Hair",
+    "armor": 0,
+    "chance": 100
+  },
+  "chest": {
+    "src": "./assets/shirts/shirt40.png",
+    "armor": 2,
+    "name": "Workers Shirt",
+    "chance": 100
+  },
+  "legs": {
+    "src": "./assets/legs/legs21.png",
+    "armor": 2,
+    "name": "Leather Pants",
+    "chance": 100
+  },
+  "facialHair": {
+    "src": "./assets/facial-hair/facial-hair15.png",
+    "name": "Long Goatee",
+    "chance": 100
+  },
+  "weapon": {
+    "src": "./assets/weapons/daggers/dagger8.png",
+    "type": "Dagger",
+    "elemental": "Curse",
+    "damage": "d6",
+    "modifier": 5,
+    "chance": 100
+  },
+  "hp": 19,
+  "ac": 14,
+  "str": 13,
+  "strModifier": "+1",
+  "dex": 12,
+  "dexModifier": "+1",
+  "con": 12,
+  "conModifier": "+1",
+  "int": 19,
+  "intModifier": "+4",
+  "wis": 18,
+  "wisModifier": "+4",
+  "cha": 11,
+  "chaModifier": "+0",
+  "coins": 767,
+  "name": "Séverin Illfate",
+  "sex": "Male",
+  "race": "Halfling",
+  "class": "Rogue",
+  "height": "121cm (3'12\")",
+  "background": {
+    "background": "Commoner",
+    "chance": 100
+  },
+  "description": "Séverin Illfate is a Halfling Rogue, who has 5 sibling(s), and was born in a guild and rasied by a Single Father. Séverin Illfate lives in the upper Isle of Zenaria, where he lives out his days as a Commoner. Séverin Illfate spent most of his teenage years flirting and wooing many people. Locals would pay him to teach them how to do the same.",
+  "image_url": "https://link.storjshare.io/s/jvckcktruijybqbs2esw5olt747a/characters/images/96220b.png",
+  "sprite_url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAB8klEQVRYhe1UQSgEURj+npa2dkJs1GaTsrVTo7ROiuwqtTnMHQe1B4qrlhNykKRccdjNRa7mIK2DlYOTzWGLcpKitLZsWKKe09tmZ2d588aS+GqaeW/+977v///vPeAf//jrIFaCLw8G6fz6K+bHq0v+tYZ2Le3FUGV1QXx7v4go/xJE/iUowm1dQGtol5zvLVM9+Yk8JkxuWYAeLOuusw1bAoT6xqrQ0jNRmJMk6Xs8AAD+cJTc3uWQ2lkSWW5PQPeoi3aPugo+SO0sobezFvq5ignQk0wnVtHUWIvpxCqOTnMl/ysiwIiatj4AwMBkM1e8pmlU07QikdwCzLIbWewvidMfUyN5JpOBqqpEL4JbQHxoDvGhuU9jPiKPRCIkFouJVYDhePPR9Ljp54NKAwWAgOKkAcVZRO52u6GqaiHWwUNarqxG+MNRwsjZO4cnHEbyMCMHOC8itlkynSWAuR/MKrC2MoPhqdlCTCr9XMJn6xSUQzKdJcl0lgxPzWJrZcGU2BKCSgNlWQFAneSgxse4JqA4udrGpYx5wB+OEiYAADxeH66vLgAA9w9v9rK0gjrJQWVZpgAgy7JpBXgh5AGP1/fhuOICvhJc94ARrO/lxlbw4xX4nQI8Xl+R8eyYUMgDjtcb028RfFkLOtrrhe6Cd/1vuQG9pzsWAAAAAElFTkSuQmCC",
+  "weapon_url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAAeUlEQVRYhe3RsRGAIAwF0GCFPWNowwJuwBDs4woZIoNYMQYD2MUKz1KEw+a/6jfkhwsRAAAAdCQiKiL6Wzkza8lv3029ynPOFGM0ZYkh/GLVL/b+OTNXn8D0WGJNO208k3OOQghVM7ssUPKRzuZ5n8ufeXg5AAC0uACPfzHL3engiwAAAABJRU5ErkJggg==",
+  "seed": "96220b"
+}

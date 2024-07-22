@@ -1,0 +1,72 @@
+{
+  "body": {
+    "src": "./assets/body/body16.png",
+    "name": "Small Pointed Ear",
+    "race": "High Elf"
+  },
+  "eyes": {
+    "src": "./assets/eyes/eye4.png",
+    "name": "Red",
+    "chance": 100
+  },
+  "hair": {
+    "src": "./assets/hair/hair30.png",
+    "name": "Short Hair",
+    "armor": 0,
+    "chance": 100
+  },
+  "chest": {
+    "src": "./assets/shirts/shirt41.png",
+    "armor": 2,
+    "name": "Workers Shirt",
+    "chance": 100
+  },
+  "legs": {
+    "src": "./assets/legs/legs11.png",
+    "armor": 1,
+    "name": "Tan Pants",
+    "chance": 100
+  },
+  "facialHair": {
+    "src": "./assets/facial-hair/facial-hair4.png",
+    "name": "Beard",
+    "chance": 100
+  },
+  "weapon": {
+    "src": "./assets/weapons/bows/bow19.png",
+    "type": "Long Bow",
+    "elemental": "None",
+    "damage": "d6",
+    "modifier": 4,
+    "chance": 500
+  },
+  "hp": 14,
+  "ac": 13,
+  "str": 11,
+  "strModifier": "+0",
+  "dex": 8,
+  "dexModifier": "-1",
+  "con": 8,
+  "conModifier": "-1",
+  "int": 11,
+  "intModifier": "+0",
+  "wis": 12,
+  "wisModifier": "+1",
+  "cha": 10,
+  "chaModifier": "+0",
+  "coins": 786,
+  "name": "Zerk Desmith",
+  "sex": "Male",
+  "race": "High Elf",
+  "class": "Ranger",
+  "height": "156cm (5'1\")",
+  "background": {
+    "background": "Folk Hero",
+    "chance": 500
+  },
+  "description": "Zerk Desmith is a High Elf Ranger, who has 2 sibling(s), and was born in a Cave and rasied by an Orphanage. Zerk Desmith lives in the upper Isle of Zenaria, where he lives out his days as a Folk Hero. Others saw him as being different or strange, and so he had few companions.",
+  "image_url": "https://link.storjshare.io/s/jvckcktruijybqbs2esw5olt747a/characters/images/700210.png",
+  "sprite_url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAABt0lEQVRYhWNgGAWjYKQDRnI0/f///z+GQYyMZJnFQo4mZHBzZzdF+klywI0dXf8/ffmGYrG6RxnDzR1dZDuAiRTFGh5ljHw8XAzJrtJwMVyWBzlo/YdhfGaSFW9JLlL/OTnYGRgYGBhyczLhjkNWc+/myf9K6uaMMAesO3ANq11kOwDGhjlk6pb7WB3AwAAJDVyOICkKGBgYGAJbhP+/d/gJ53//8RMujksPLt+T7ABkS947/GQoKykg2hFUcQA6YFO0Z3jv8JMBOURo5gBsvite7YWh7saOLpJCgWgHtJuUM7SblBNUgw3gy4okR8H6mrdYExSyuIOOENxCQtmQqJKQ2GDV8ChjRLbcQUfof0pmIINXeCvOXECUAzJKOhgYGBgYDlx5R7DcOHDlHdwRM3oqGO59/IhXPUW5AJ8jiFVLVm0ofMcOi+h6DBENjzLGbSur8UYfUSEwo6eCYUZPBYrYt29f4RgfmDN9PeW5QMOjjBG9smFgYGBYtmoXwaCGpX5cjqBJGsDliAFzAD4w6gC6OICqdQG5llO1SWaowvSfgYGB4fydf4zIbGwW47Ocqg7A5ghiAAAkt7LuWOlvRQAAAABJRU5ErkJggg==",
+  "weapon_url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAAdUlEQVRYhWNgGAWjYBSMggEGjORqDHLQ+g9jrztwjWxzyAb3bp78D3MIsmNIBUyUOgTme3IdQbEDkB0xYA6gBIw6gCoOGNBcALOc7mUBrBzYtrKabN8zMAyXNDCyHTBn+vqBzQWjdQGlYNQBo3XB0G2UUgsAANOrMRG8zkZAAAAAAElFTkSuQmCC",
+  "seed": "700210"
+}

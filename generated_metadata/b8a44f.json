@@ -1,0 +1,72 @@
+{
+  "body": {
+    "src": "./assets/body/body26.png",
+    "name": "Small Ear",
+    "race": "Orc"
+  },
+  "eyes": {
+    "src": "./assets/eyes/eye1.png",
+    "name": "Light Blue",
+    "chance": 100
+  },
+  "hair": {
+    "src": "./assets/hair/hair7.png",
+    "name": "Short Flick",
+    "armor": 0,
+    "chance": 100
+  },
+  "chest": {
+    "src": "./assets/shirts/shirt4.png",
+    "armor": 1,
+    "name": "Green Shirt",
+    "chance": 100
+  },
+  "legs": {
+    "src": "./assets/legs/legs8.png",
+    "armor": 1,
+    "name": "Padded Pants",
+    "chance": 100
+  },
+  "facialHair": {
+    "src": "./assets/facial-hair/facial-hair1.png",
+    "name": "none",
+    "chance": 100
+  },
+  "weapon": {
+    "src": "./assets/weapons/swords/sword18.png",
+    "type": "Great Axe",
+    "elemental": "Earth",
+    "damage": "d6",
+    "modifier": 4,
+    "chance": 100
+  },
+  "hp": 19,
+  "ac": 12,
+  "str": 14,
+  "strModifier": "+2",
+  "dex": 11,
+  "dexModifier": "+0",
+  "con": 15,
+  "conModifier": "+2",
+  "int": 13,
+  "intModifier": "+1",
+  "wis": 12,
+  "wisModifier": "+1",
+  "cha": 13,
+  "chaModifier": "+1",
+  "coins": 799,
+  "name": "Aleera Agrippa",
+  "sex": "Female",
+  "race": "Orc",
+  "class": "Barbarian",
+  "height": "160cm (5'3\")",
+  "background": {
+    "background": "Folk Hero",
+    "chance": 500
+  },
+  "description": "Aleera Agrippa is a Orc Barbarian, who has 9 sibling(s), and was born in a Temple and rasied by a Temple. Aleera Agrippa lives in the upper Isle of Zenethia, where she lives out her days as a Folk Hero. Aleera Agrippa was exiled from others as a child for being strange. Other kids found her scary.",
+  "image_url": "https://link.storjshare.io/s/jvckcktruijybqbs2esw5olt747a/characters/images/b8a44f.png",
+  "sprite_url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAABuElEQVRYhe2Vv0vDQBzF34lDwVG4sW5JsbN0EoR2cWxxKThJyayBgP9DQOsmUlwsdJF2cBJaEOpSnJUaFKFTCaWLS+tyDnol6c+7y1UQ+qCQfHO997nvvVyAlVbSoPenGxa8jzOwOAMDAMuy2HgtKKLDtN/rYmffGc0VZ2DH52cAgHa7jUQiAQAontjokLDnehTzfq+r8veQlAC4+enV/cznfLWWZTHbtsm09gPAmqxxOpthQfOj4u3EmA4BGW/1tJoSAIDQyq+PD1SmUAdo1OrKwdUCwCG+hkPwXxQo6RAWHLABDMTQxOvzLsxkE1tJg8XgoeTKv9ZSHeDmADCAATPZRPC+4ExPujYAbqb6PBLAoWMIrU50nDTAIpVdTymI0gAiRjJZEHoLfib0Fo4rux7h5ulshgFAz3uMDvDxlgEgdgiVXBBuLiJtGQiqUasT0cNJ6Wu4+Wn+XpnYGFUnt6hRq5Pc3vbcbkh3gFLKKtVWqFaptkApnWpUfXiZ2wkhgFktvbi8i/xhWkoGlgrg+z7J51KhWj6Xgu/7f3MQyWZAO4Bu/T8A3RlQEqWU8T0PXqtI2xaoQnwDDxi1jNnEmGQAAAAASUVORK5CYII=",
+  "weapon_url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAAbUlEQVRYhe3RsQ2AMAwF0QtijtSZLDUwCDAUQ0SU1OxgKhpEE4OU5r/ShXWyQcQhGhYNA8g523NWI3gDhmUGoJRCSgmAdZw4Qt3OzhPQ3J8v6D0Bb2euPf2t+QsUoAAFKOBzwLlvbQO+UoCIiFwxXCK2syyBXAAAAABJRU5ErkJggg==",
+  "seed": "b8a44f"
+}

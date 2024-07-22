@@ -189,7 +189,7 @@ async function uploadFiles() {
         try {
           const storjUrl = await uploadToStorj(localPath, storjPath);
           // Uncomment the following line to log uploaded URLs
-          console.log(`${type} uploaded: ${storjUrl}`);
+          // console.log(`${type} uploaded: ${storjUrl}`);
 
           if (type === "image") {
             const hexValue = path.basename(file, path.extname(file));

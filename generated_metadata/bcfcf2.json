@@ -1,0 +1,72 @@
+{
+  "body": {
+    "src": "./assets/body/body30.png",
+    "name": "Small Pointed Ear",
+    "race": "Orc"
+  },
+  "eyes": {
+    "src": "./assets/eyes/eye1.png",
+    "name": "Light Blue",
+    "chance": 100
+  },
+  "hair": {
+    "src": "./assets/hair/hair69.png",
+    "name": "Spiked Bun",
+    "armor": 0,
+    "chance": 100
+  },
+  "chest": {
+    "src": "./assets/shirts/shirt24.png",
+    "armor": 2,
+    "name": "Yellow Cape",
+    "chance": 50
+  },
+  "legs": {
+    "src": "./assets/legs/legs12.png",
+    "armor": 1,
+    "name": "Pink Pants",
+    "chance": 100
+  },
+  "facialHair": {
+    "src": "./assets/facial-hair/facial-hair7.png",
+    "name": "Chin Stubble",
+    "chance": 100
+  },
+  "weapon": {
+    "src": "./assets/weapons/swords/sword9.png",
+    "type": "Sword",
+    "elemental": "Earth",
+    "damage": "d6",
+    "modifier": 2,
+    "chance": 100
+  },
+  "hp": 16,
+  "ac": 13,
+  "str": 10,
+  "strModifier": "+0",
+  "dex": 12,
+  "dexModifier": "+1",
+  "con": 9,
+  "conModifier": "-1",
+  "int": 15,
+  "intModifier": "+2",
+  "wis": 10,
+  "wisModifier": "+0",
+  "cha": 16,
+  "chaModifier": "+3",
+  "coins": 693,
+  "name": "Malfas Ashsorrow",
+  "sex": "Male",
+  "race": "Orc",
+  "class": "Barbarian",
+  "height": "173cm (5'8\")",
+  "background": {
+    "background": "Peasant",
+    "chance": 1000
+  },
+  "description": "Malfas Ashsorrow is a Orc Barbarian, who has 4 sibling(s), and was born in the Home of a healer and rasied by a Gaurdian. Malfas Ashsorrow lives in the upper Isle of Zenethia, where he lives out his days as a Peasant. Malfas Ashsorrow had several friends, and his childhood was generally a happy one.",
+  "image_url": "https://link.storjshare.io/s/jvckcktruijybqbs2esw5olt747a/characters/images/bcfcf2.png",
+  "sprite_url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAACRklEQVRYhd2WsWsTURzHPy8IGkICYtEtECihW620HgZDJ486Co6aJdRNF7dCpqJg0cG2Li1dkrrYP8ASJ1FS4patZAkcZGhJyJBCFDTPodzlLrm73LskIH7hyLuXl9/3c+/3u98L/HeqIpMS+ebPhpxezGpVmldQgKAQkakQeuhD5DXjIJQB3j5b8X8qDWH8cEL4SaiaZ/O7Ay9NE3CZIvs9VWTy7uB3hvD2UQKwmw3LMncB8IO4ogqgaZowIXY+7nosQhguEBMDPHnxdMT44csdPr97rhLGIaUiPNwujWyjp/lQMU4FwAui9L6oGiY8gAnxs/cL8xJCKBdzaAApt6SUW3Lc3EwAGrWcvGg2ATjaW+Za9CpHe8sAXDSbNGo5ZYjAW2cPPnfjOgD9uQ0irctO12p3rLWpxeJIQ/LqA6FqoNXu0Gp3WEjdJr3yyWFeOJDouu66E27zoQ+jzNoX4vG4NTbqFQoHg/jDZl5Qyp3Qbh6LxQDodruO728u3OL89Ay9oDvmy+XySBoCAdjzb9QrDnPzE/qsZ0/Y/3bPggA4Pz1zNTallAKjXgFg/1UfgEQi4bgH2MyrtYTAAPb8jtPhdkm4dUw3BUrBsPn341Ue37Hfw/21r64gXsWnBOCmXq9njaPRaNgwwVKwmResZ09G5h888j/uzKf324WZ/ik1q39qb8EkEBMBpBaLIpnOkExnfNcl05nBORBQgYvQDNyo5STHA0P4HdocQqTAbuI1ninAP6Gl+Yhcmo/I4XEYTW0HwkL8BZ/t9NFkgNU7AAAAAElFTkSuQmCC",
+  "weapon_url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAAh0lEQVRYhe2TsQ2AMAwEPwzCGmyQodiAlbJBGIM9kKmQIhSatyUnkq9M4b9Yb2A6KmQVyHHv4irgJ9EIDCOhGbVYObkKaLbACWxI18lGWggMQ9UX0X0DIRAClEDOudv6v3dzgV4YEw4AyUoAAEop9Dwa9ucvc5YwBCxRtbYtoMsFfCWCIJiSB+6oQCCMNoQQAAAAAElFTkSuQmCC",
+  "seed": "bcfcf2"
+}

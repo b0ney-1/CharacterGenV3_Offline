@@ -1,0 +1,72 @@
+{
+  "body": {
+    "src": "./assets/body/body6.png",
+    "name": "No Ear",
+    "race": "Orc"
+  },
+  "eyes": {
+    "src": "./assets/eyes/eye4.png",
+    "name": "Red",
+    "chance": 100
+  },
+  "hair": {
+    "src": "./assets/hair/hair16.png",
+    "name": "Long Straight",
+    "armor": 0,
+    "chance": 100
+  },
+  "chest": {
+    "src": "./assets/shirts/shirt3.png",
+    "armor": 3,
+    "name": "Crystal Trimmed Armor",
+    "chance": 100
+  },
+  "legs": {
+    "src": "./assets/legs/legs15.png",
+    "armor": 1,
+    "name": "Red Lined Pants",
+    "chance": 100
+  },
+  "facialHair": {
+    "src": "./assets/facial-hair/facial-hair1.png",
+    "name": "none",
+    "chance": 100
+  },
+  "weapon": {
+    "src": "./assets/weapons/swords/sword11.png",
+    "type": "Sword",
+    "elemental": "Water",
+    "damage": "d6",
+    "modifier": 1,
+    "chance": 100
+  },
+  "hp": 14,
+  "ac": 14,
+  "str": 15,
+  "strModifier": "+2",
+  "dex": 11,
+  "dexModifier": "+0",
+  "con": 13,
+  "conModifier": "+1",
+  "int": 15,
+  "intModifier": "+2",
+  "wis": 9,
+  "wisModifier": "-1",
+  "cha": 15,
+  "chaModifier": "+2",
+  "coins": 89,
+  "name": "Nyssa Atwater",
+  "sex": "Female",
+  "race": "Orc",
+  "class": "Barbarian",
+  "height": "174cm (5'9\")",
+  "background": {
+    "background": "Folk Hero",
+    "chance": 500
+  },
+  "description": "Nyssa Atwater is a Orc Barbarian, who has 5 sibling(s), and was born in a Temple and rasied by a Single Father. Nyssa Atwater lives in the upper Isle of Zenethia, where she lives out her days as a Folk Hero. Nyssa Atwater spent most of her childhood alone, with no close friends.",
+  "image_url": "https://link.storjshare.io/s/jvckcktruijybqbs2esw5olt747a/characters/images/674ca8.png",
+  "sprite_url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAABwUlEQVRYhe2Wv07DMBDGP0eoU4ZIDaoQQmGmW9tnyEOQoVMfgA4Rj4AY2FgrdYAnQAwdeILWW5mpEOrQoEqMHnIsOE3amDpOokqIT7Jix3/ud5c7K8CfU39OGBJdPxHpLLfq4rh5AXQgagPQhWC1WO7PCc2LzfiOKe0cmZzvnZ3ueLV4/zBypjCANO44DgAgvO4DAIIgVG8aEqmiYBQBx3ESw7kat9nOZ1CodBJe/ua5howA0t4/PtzmLxq3GT5fqwPodDpaF4vuusIAM8tKDg+CkK3XX5AtCEImjc+sYkHVTsJuHAMAmsctvLVO6D41R70eyXn5rBxgB2b0nIxHJof8qFQVFA13KYA8Y6pw+76fm4h577UB0saEEBBCZPqc88xNt21MBVU4BzjnLF1qjUYjmZtZFrpxjCiK4Lou/OUVsNzsnUwmO9exFoCqtoUQGQA2nSZwURQBAFzXzTUsVSiLZJi38yE93v4U+1QqjdPep8U5Z7ogRvfA+WqVHSvWcc6ZKvmkSkXAXyzKbDeX53k0AAgABgB5nqese9lUZ9X6Uyqzv7IqKANxMIB9+gc4OICRbNsm27Zpu2+iyiJgCvENX3KvS4MZiSwAAAAASUVORK5CYII=",
+  "weapon_url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAAoUlEQVRYhWNgGHIg/up/hqL//yu2/P9PDeOYyNXYsY+BgRqOINsB1HIEI1m64q/+ZxDWQvD7GMkzh4HCEKAGoI4DisiPBvIcsFCbkeHtNXLtpIIDqAjIdwCVQmEIh8CoA0a0A9zc3LAWPLjEqe4AbJaRYzkDA7mVEQ4Ld+3aRbZ5ZANyfQ4DQzMRjjqAmoCiVIucAAckB6A7YhSMglEwJAEANVAuS6G0VN8AAAAASUVORK5CYII=",
+  "seed": "674ca8"
+}
