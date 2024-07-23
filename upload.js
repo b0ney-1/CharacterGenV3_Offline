@@ -1,101 +1,102 @@
 const fs = require("fs");
 const path = require("path");
-const simpleGit = require("simple-git");
+const { execSync } = require("child_process");
 require("dotenv").config();
 
-const git = simpleGit();
-const TEMP_DIR = "./temp_upload";
-const IMAGE_DIR = path.join(__dirname, "generated_images");
-const METADATA_DIR = path.join(__dirname, "generated_metadata");
+const TEMP_DIR = path.resolve(__dirname, "temp_upload");
+const IMAGES_DIR = path.resolve(__dirname, "generated_images");
+const METADATA_DIR = path.resolve(__dirname, "generated_metadata");
 const REPO_URL = process.env.GIT_REPO_URL;
 
-// Function to initialize and configure the Git repository
-async function initGitRepo() {
+if (!REPO_URL) {
+  console.error("GIT_REPO_URL not set in .env file");
+  process.exit(1);
+}
+
+function runCommand(command) {
+  console.log(`Running command: ${command}`);
+  execSync(command, { stdio: "inherit" });
+}
+
+function checkDirExists(dir) {
+  return fs.existsSync(dir) && fs.readdirSync(dir).length > 0;
+}
+
+function initGitRepo() {
+  if (fs.existsSync(TEMP_DIR)) {
+    fs.rmSync(TEMP_DIR, { recursive: true, force: true });
+    console.log(`Deleted existing ${TEMP_DIR} directory.`);
+  }
+
+  fs.mkdirSync(TEMP_DIR, { recursive: true });
+  console.log(`Created new ${TEMP_DIR} directory.`);
+
+  process.chdir(TEMP_DIR);
+
+  runCommand("git init");
+  console.log("Initialized a new Git repository.");
+
   try {
-    // Remove temp directory if it exists
-    if (fs.existsSync(TEMP_DIR)) {
-      fs.rmSync(TEMP_DIR, { recursive: true, force: true });
-      console.log(`Deleted existing ${TEMP_DIR} directory.`);
-    }
-
-    // Create a new temp directory
-    fs.mkdirSync(TEMP_DIR);
-    console.log(`Created new ${TEMP_DIR} directory.`);
-
-    // Change to the temp directory
-    process.chdir(TEMP_DIR);
-
-    // Initialize a new Git repository
-    await git.init();
-    console.log("Initialized a new Git repository.");
-
-    // Check if the remote origin already exists
-    const remotes = await git.getRemotes();
-    if (
-      remotes.length === 0 ||
-      !remotes.find((remote) => remote.name === "origin")
-    ) {
-      // Add the remote origin if it doesn't exist
-      await git.addRemote("origin", REPO_URL);
-      console.log(`Added remote origin: ${REPO_URL}`);
-    } else {
-      console.log("Remote origin already exists.");
+    const remotes = execSync("git remote -v", { encoding: "utf8" }).trim();
+    if (remotes.includes("origin")) {
+      runCommand("git remote remove origin");
+      console.log("Removed existing remote origin.");
     }
   } catch (error) {
-    console.error("Error initializing Git repository:", error.message);
+    console.log("No existing remote origin found.");
+  }
+
+  runCommand(`git remote add origin ${REPO_URL}`);
+  console.log(`Added remote origin: ${REPO_URL}`);
+
+  try {
+    runCommand("git fetch");
+    console.log("Fetched from remote repository.");
+  } catch (error) {
+    console.log("Failed to fetch from remote repository.");
   }
 }
 
-// Function to copy the folders to the temp directory
-function copyFiles() {
-  try {
-    console.log("Checking existence of directories...");
-    console.log("Image directory:", IMAGE_DIR);
-    console.log("Metadata directory:", METADATA_DIR);
-
-    if (fs.existsSync(IMAGE_DIR)) {
-      fs.cpSync(IMAGE_DIR, path.join(TEMP_DIR, "generated_images"), {
-        recursive: true,
-      });
-      console.log("Copied images to temp directory.");
-    } else {
-      console.error("Image directory does not exist.");
-    }
-
-    if (fs.existsSync(METADATA_DIR)) {
-      fs.cpSync(METADATA_DIR, path.join(TEMP_DIR, "generated_metadata"), {
-        recursive: true,
-      });
-      console.log("Copied metadata to temp directory.");
-    } else {
-      console.error("Metadata directory does not exist.");
-    }
-  } catch (error) {
-    console.error("Error copying files:", error.message);
+function copyDirectories() {
+  if (!checkDirExists(IMAGES_DIR)) {
+    console.error("Image directory does not exist or is empty.");
+    process.exit(1);
   }
+  if (!checkDirExists(METADATA_DIR)) {
+    console.error("Metadata directory does not exist or is empty.");
+    process.exit(1);
+  }
+
+  // Ensure that directories are copied correctly without nesting
+  fs.cpSync(IMAGES_DIR, path.join(TEMP_DIR, "generated_images"), {
+    recursive: true,
+  });
+  fs.cpSync(METADATA_DIR, path.join(TEMP_DIR, "generated_metadata"), {
+    recursive: true,
+  });
+
+  console.log("Copied images and metadata to temporary directory.");
 }
 
-// Function to commit and push the changes
-async function commitAndPush() {
+function commitAndPush() {
+  process.chdir(TEMP_DIR);
+
+  runCommand("git add .");
+  runCommand('git commit -m "Add images and metadata"');
+
   try {
-    process.chdir(TEMP_DIR); // Ensure we are in the temp directory
-    await git.add("./*"); // Add all files including folders
-    await git.commit("Add generated images and metadata");
-    await git.push("origin", "master");
-    console.log("Changes pushed to remote repository.");
+    runCommand("git push --set-upstream origin master");
+    console.log("Pushed changes to remote repository.");
   } catch (error) {
     console.error("Error committing or pushing files:", error.message);
+    process.exit(1);
   }
 }
 
-async function main() {
-  try {
-    await initGitRepo();
-    copyFiles();
-    await commitAndPush();
-  } catch (error) {
-    console.error("Error:", error.message);
-  }
+function main() {
+  initGitRepo();
+  copyDirectories();
+  commitAndPush();
 }
 
 main();
