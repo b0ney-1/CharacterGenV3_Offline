@@ -12,10 +12,15 @@ const REPO_URL = process.env.GIT_REPO_URL;
 // Function to initialize and configure the Git repository
 async function initGitRepo() {
   try {
-    // Create temp directory if it doesn't exist
-    if (!fs.existsSync(TEMP_DIR)) {
-      fs.mkdirSync(TEMP_DIR);
+    // Remove temp directory if it exists
+    if (fs.existsSync(TEMP_DIR)) {
+      fs.rmSync(TEMP_DIR, { recursive: true, force: true });
+      console.log(`Deleted existing ${TEMP_DIR} directory.`);
     }
+
+    // Create a new temp directory
+    fs.mkdirSync(TEMP_DIR);
+    console.log(`Created new ${TEMP_DIR} directory.`);
 
     // Change to the temp directory
     process.chdir(TEMP_DIR);
@@ -49,6 +54,8 @@ function copyFiles() {
         recursive: true,
       });
       console.log("Copied images to temp directory.");
+    } else {
+      console.log("Image directory does not exist.");
     }
 
     if (fs.existsSync(METADATA_DIR)) {
@@ -56,6 +63,8 @@ function copyFiles() {
         recursive: true,
       });
       console.log("Copied metadata to temp directory.");
+    } else {
+      console.log("Metadata directory does not exist.");
     }
   } catch (error) {
     console.error("Error copying files:", error.message);
