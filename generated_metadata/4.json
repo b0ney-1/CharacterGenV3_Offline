@@ -1,62 +1,62 @@
 {
-  "name": "Eldar Hightower #4",
-  "description": "Eldar Hightower is a Wood Elf Cleric, who has 4 sibling(s), and was born in a Swamp and rasied by their Grandparents. Eldar Hightower lives in the upper Isle of Zenethia, where he lives out his days as a Peasant. Eldar Hightower grew up with the ambition of being a powerful wizard, hoping he could become more powerful than the rest of his peers.",
+  "name": "Gelda Yoakum #4",
+  "description": "Gelda Yoakum is a Dark Elf Rogue, who has 4 sibling(s), and was born in a Cave and rasied by their extended Family. Gelda Yoakum lives in the upper Isle of Zenaria, where she lives out her days as a Folk Hero. Gelda Yoakum holds the record for most lobsters caught in 24 hours using a single net. The record being 200 lobsters caught in 24 hours.",
   "image": "",
   "attributes": [
     {
       "trait_type": "Race",
-      "value": "Wood Elf"
+      "value": "Dark Elf"
     },
     {
       "trait_type": "Class",
-      "value": "Cleric"
+      "value": "Rogue"
     },
     {
       "trait_type": "Sex",
-      "value": "Male"
+      "value": "Female"
     },
     {
       "trait_type": "Height",
-      "value": "166cm (5'5\")"
+      "value": "170cm (5'7\")"
     },
     {
       "trait_type": "Background",
-      "value": "Peasant"
+      "value": "Folk Hero"
     },
     {
       "trait_type": "Body",
-      "value": "Small Pointed Ear"
+      "value": "Large Pointed Ear"
     },
     {
       "trait_type": "Eyes",
-      "value": "Light Blue"
+      "value": "Light Green"
     },
     {
       "trait_type": "Hair",
-      "value": "Long Tied Hair"
+      "value": "Short Flick"
     },
     {
       "trait_type": "Chest",
-      "value": "Workers Shirt"
+      "value": "Ragged Drape"
     },
     {
       "trait_type": "Legs",
-      "value": "Green Lined Pants"
+      "value": "Leather Robe"
     },
     {
       "trait_type": "Facial Hair",
-      "value": "Chin Stubble"
+      "value": "none"
     },
     {
       "trait_type": "Weapon"
     },
     {
       "trait_type": "Weapon Element",
-      "value": "None"
+      "value": "Curse"
     },
     {
       "trait_type": "HP",
-      "value": 14
+      "value": 15
     },
     {
       "trait_type": "AC",
@@ -68,27 +68,27 @@
     },
     {
       "trait_type": "DEX",
-      "value": 9
-    },
-    {
-      "trait_type": "CON",
       "value": 10
     },
     {
+      "trait_type": "CON",
+      "value": 11
+    },
+    {
       "trait_type": "INT",
-      "value": 15
+      "value": 16
     },
     {
       "trait_type": "WIS",
-      "value": 14
-    },
-    {
-      "trait_type": "CHA",
       "value": 15
     },
     {
+      "trait_type": "CHA",
+      "value": 14
+    },
+    {
       "trait_type": "Coins",
-      "value": 601
+      "value": 795
     }
   ]
 }

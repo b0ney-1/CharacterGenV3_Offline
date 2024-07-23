@@ -1,15 +1,15 @@
 {
-  "name": "Farkas Quellings #5",
-  "description": "Farkas Quellings is a Halfling Rogue, who has 9 sibling(s), and was born in a Swamp and rasied by an Adoptive Family. Farkas Quellings lives in the upper Isle of Zenaria, where he lives out his days as a Peasant. Everyone knew who he was, and he had friends everywhere he went.",
+  "name": "Benji Dandridge #5",
+  "description": "Benji Dandridge is a Dark Elf Ranger, who has no sibling(s), and was born in a Tavern and rasied by a Single Father. Benji Dandridge lives in the lower Isle of Zarkus, where he lives out his days as a Commoner. Benji Dandridge is still haunted by his childhood, when he was treated badly by his peers.",
   "image": "",
   "attributes": [
     {
       "trait_type": "Race",
-      "value": "Halfling"
+      "value": "Dark Elf"
     },
     {
       "trait_type": "Class",
-      "value": "Rogue"
+      "value": "Ranger"
     },
     {
       "trait_type": "Sex",
@@ -17,19 +17,19 @@
     },
     {
       "trait_type": "Height",
-      "value": "117cm (3'10\")"
+      "value": "172cm (5'8\")"
     },
     {
       "trait_type": "Background",
-      "value": "Peasant"
+      "value": "Commoner"
     },
     {
       "trait_type": "Body",
-      "value": "No Ear"
+      "value": "Small Pointed Ear"
     },
     {
       "trait_type": "Eyes",
-      "value": "Light Blue"
+      "value": "Red"
     },
     {
       "trait_type": "Hair",
@@ -37,22 +37,22 @@
     },
     {
       "trait_type": "Chest",
-      "value": "Crystal Trimmed Armor"
+      "value": "Workers Shirt"
     },
     {
       "trait_type": "Legs",
-      "value": "Green Robe"
+      "value": "Green Lined Pants"
     },
     {
       "trait_type": "Facial Hair",
-      "value": "Trimmed Beard"
+      "value": "Beard"
     },
     {
       "trait_type": "Weapon"
     },
     {
       "trait_type": "Weapon Element",
-      "value": "Blood"
+      "value": "Earth"
     },
     {
       "trait_type": "HP",
@@ -60,15 +60,15 @@
     },
     {
       "trait_type": "AC",
-      "value": 16
+      "value": 13
     },
     {
       "trait_type": "STR",
-      "value": 6
+      "value": 9
     },
     {
       "trait_type": "DEX",
-      "value": 14
+      "value": 9
     },
     {
       "trait_type": "CON",
@@ -76,19 +76,19 @@
     },
     {
       "trait_type": "INT",
-      "value": 16
+      "value": 13
     },
     {
       "trait_type": "WIS",
-      "value": 14
+      "value": 13
     },
     {
       "trait_type": "CHA",
-      "value": 12
+      "value": 11
     },
     {
       "trait_type": "Coins",
-      "value": 346
+      "value": 237
     }
   ]
 }

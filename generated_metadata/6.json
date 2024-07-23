@@ -1,6 +1,6 @@
 {
-  "name": "Shikta Yale #6",
-  "description": "Shikta Yale is a Wood Elf Ranger, who has 8 sibling(s), and was born on a Ship and rasied by their extended Family. Shikta Yale lives in the lower Isle of Zarkus, where she lives out her days as a Peasant. Shikta Yale is still haunted by her childhood, when she was treated badly by her peers.",
+  "name": "Nyssa Wixx #6",
+  "description": "Nyssa Wixx is a Wood Elf Barbarian, who has 6 sibling(s), and was born in a guild and rasied by their Grandparents. Nyssa Wixx lives in the upper Isle of Zenethia, where she lives out her days as a Peasant. Nyssa Wixx travelled in a caravan for a few months in her early teenage years. During this period he learned to play mutliple musical intruments.",
   "image": "",
   "attributes": [
     {
@@ -9,7 +9,7 @@
     },
     {
       "trait_type": "Class",
-      "value": "Ranger"
+      "value": "Barbarian"
     },
     {
       "trait_type": "Sex",
@@ -17,7 +17,7 @@
     },
     {
       "trait_type": "Height",
-      "value": "172cm (5'8\")"
+      "value": "154cm (5'1\")"
     },
     {
       "trait_type": "Background",
@@ -29,19 +29,19 @@
     },
     {
       "trait_type": "Eyes",
-      "value": "Red"
+      "value": "Light Blue"
     },
     {
       "trait_type": "Hair",
-      "value": "Long Ponytail"
+      "value": "Troll Spike"
     },
     {
       "trait_type": "Chest",
-      "value": "Red Cape"
+      "value": "Workers Shirt"
     },
     {
       "trait_type": "Legs",
-      "value": "Green Shorts"
+      "value": "Grey Pants"
     },
     {
       "trait_type": "Facial Hair",
@@ -52,43 +52,43 @@
     },
     {
       "trait_type": "Weapon Element",
-      "value": "Blood"
+      "value": "Water"
     },
     {
       "trait_type": "HP",
-      "value": 15
+      "value": 16
     },
     {
       "trait_type": "AC",
-      "value": 15
-    },
-    {
-      "trait_type": "STR",
-      "value": 10
-    },
-    {
-      "trait_type": "DEX",
-      "value": 11
-    },
-    {
-      "trait_type": "CON",
-      "value": 10
-    },
-    {
-      "trait_type": "INT",
-      "value": 12
-    },
-    {
-      "trait_type": "WIS",
-      "value": 10
-    },
-    {
-      "trait_type": "CHA",
       "value": 13
     },
     {
+      "trait_type": "STR",
+      "value": 12
+    },
+    {
+      "trait_type": "DEX",
+      "value": 12
+    },
+    {
+      "trait_type": "CON",
+      "value": 8
+    },
+    {
+      "trait_type": "INT",
+      "value": 8
+    },
+    {
+      "trait_type": "WIS",
+      "value": 13
+    },
+    {
+      "trait_type": "CHA",
+      "value": 12
+    },
+    {
       "trait_type": "Coins",
-      "value": 11
+      "value": 610
     }
   ]
 }

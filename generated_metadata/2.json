@@ -1,6 +1,6 @@
 {
-  "name": "Zeniya Mason #2",
-  "description": "Zeniya Mason is a Dark Elf Ranger, who has 4 sibling(s), and was born in a Field and rasied by their extended Family. Zeniya Mason lives in the lower Isle of Zarkus, where she lives out her days as a Noble. Zeniya Mason spent most of her teenage years flirting and wooing many people. Locals would pay her to teach them how to do the same.",
+  "name": "Vixen Halliwell #2",
+  "description": "Vixen Halliwell is a Dark Elf Barbarian, who has 10 sibling(s), and was born on a Battlefield and rasied by their extended Family. Vixen Halliwell lives in the upper Isle of Zenethia, where she lives out her days as a Peasant. Everyone knew who she was, and she had friends everywhere she went.",
   "image": "",
   "attributes": [
     {
@@ -9,7 +9,7 @@
     },
     {
       "trait_type": "Class",
-      "value": "Ranger"
+      "value": "Barbarian"
     },
     {
       "trait_type": "Sex",
@@ -17,31 +17,31 @@
     },
     {
       "trait_type": "Height",
-      "value": "182cm (5'12\")"
+      "value": "164cm (5'5\")"
     },
     {
       "trait_type": "Background",
-      "value": "Noble"
+      "value": "Peasant"
     },
     {
       "trait_type": "Body",
-      "value": "Small Pointed Ear"
+      "value": "Large Pointed Ear"
     },
     {
       "trait_type": "Eyes",
-      "value": "Light Green"
+      "value": "Light Blue"
     },
     {
       "trait_type": "Hair",
-      "value": "Dreadlocks"
+      "value": "Bun"
     },
     {
       "trait_type": "Chest",
-      "value": "Mage Robes"
+      "value": "Ragged Drape"
     },
     {
       "trait_type": "Legs",
-      "value": "Green Lined Pants"
+      "value": "Blue Robe"
     },
     {
       "trait_type": "Facial Hair",
@@ -52,11 +52,11 @@
     },
     {
       "trait_type": "Weapon Element",
-      "value": "None"
+      "value": "Lightning"
     },
     {
       "trait_type": "HP",
-      "value": 24
+      "value": 11
     },
     {
       "trait_type": "AC",
@@ -64,31 +64,31 @@
     },
     {
       "trait_type": "STR",
-      "value": 20
+      "value": 15
     },
     {
       "trait_type": "DEX",
-      "value": 10
+      "value": 6
     },
     {
       "trait_type": "CON",
-      "value": 18
+      "value": 8
     },
     {
       "trait_type": "INT",
-      "value": 11
+      "value": 12
     },
     {
       "trait_type": "WIS",
-      "value": 10
-    },
-    {
-      "trait_type": "CHA",
       "value": 17
     },
     {
+      "trait_type": "CHA",
+      "value": 18
+    },
+    {
       "trait_type": "Coins",
-      "value": 674
+      "value": 706
     }
   ]
 }

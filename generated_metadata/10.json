@@ -1,6 +1,6 @@
 {
-  "name": "Vasha Aoki #10",
-  "description": "Vasha Aoki is a Orc Barbarian, who has 1 sibling(s), and was born on a Battlefield and rasied by a Mother and Father. Vasha Aoki lives in the upper Isle of Zenethia, where she lives out her days as a Peasant. Vasha Aoki was proficient at card tricks and wished to learn real magic in order to improve her \"magic\" acts.",
+  "name": "Rita Seibert #10",
+  "description": "Rita Seibert is a Orc Cleric, who has 2 sibling(s), and was born in the streets and rasied by an Adoptive Family. Rita Seibert lives in the upper Isle of Zenaria, where she lives out her days as an Outlaw. Rita Seibert learned the dark arts of thievery when she was young, as it allowed her to earn money from pickpocketing the other locals.",
   "image": "",
   "attributes": [
     {
@@ -9,7 +9,7 @@
     },
     {
       "trait_type": "Class",
-      "value": "Barbarian"
+      "value": "Cleric"
     },
     {
       "trait_type": "Sex",
@@ -17,15 +17,15 @@
     },
     {
       "trait_type": "Height",
-      "value": "161cm (5'3\")"
+      "value": "182cm (5'12\")"
     },
     {
       "trait_type": "Background",
-      "value": "Peasant"
+      "value": "Outlaw"
     },
     {
       "trait_type": "Body",
-      "value": "Small Ear"
+      "value": "No Ear"
     },
     {
       "trait_type": "Eyes",
@@ -33,15 +33,15 @@
     },
     {
       "trait_type": "Hair",
-      "value": "Short Flick"
+      "value": "Troll Spike"
     },
     {
       "trait_type": "Chest",
-      "value": "Tan Shirt"
+      "value": "Leather Armor"
     },
     {
       "trait_type": "Legs",
-      "value": "Padded Pants"
+      "value": "Leather Pants"
     },
     {
       "trait_type": "Facial Hair",
@@ -52,11 +52,11 @@
     },
     {
       "trait_type": "Weapon Element",
-      "value": "Lightning"
+      "value": "Water"
     },
     {
       "trait_type": "HP",
-      "value": 19
+      "value": 14
     },
     {
       "trait_type": "AC",
@@ -64,31 +64,31 @@
     },
     {
       "trait_type": "STR",
-      "value": 11
+      "value": 16
     },
     {
       "trait_type": "DEX",
-      "value": 10
+      "value": 15
     },
     {
       "trait_type": "CON",
-      "value": 11
+      "value": 9
     },
     {
       "trait_type": "INT",
-      "value": 12
+      "value": 9
     },
     {
       "trait_type": "WIS",
-      "value": 14
+      "value": 11
     },
     {
       "trait_type": "CHA",
-      "value": 13
+      "value": 12
     },
     {
       "trait_type": "Coins",
-      "value": 866
+      "value": 754
     }
   ]
 }

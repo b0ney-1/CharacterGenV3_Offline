@@ -1,11 +1,11 @@
 {
-  "name": "Zaria Bersa #1",
-  "description": "Zaria Bersa is a Orc Ranger, who has 1 sibling(s), and was born in a Temple and rasied by a Single Mother. Zaria Bersa lives in the upper Isle of Zenethia, where she lives out her days as a Peasant. Zaria Bersa would spend week nights playing her lute at the local tavern in return for food and a room to stay in.",
+  "name": "Zeniya Bersa #1",
+  "description": "Zeniya Bersa is a Dwarf Ranger, who has no sibling(s), and was born in their family Home and rasied by a Single Father. Zeniya Bersa lives in the lower Isle of Zarkus, where she lives out her days as a Commoner. Growing up she often went hunting and foraging and was taught essential survival skills.",
   "image": "",
   "attributes": [
     {
       "trait_type": "Race",
-      "value": "Orc"
+      "value": "Dwarf"
     },
     {
       "trait_type": "Class",
@@ -17,31 +17,31 @@
     },
     {
       "trait_type": "Height",
-      "value": "164cm (5'5\")"
+      "value": "122cm (4'0\")"
     },
     {
       "trait_type": "Background",
-      "value": "Peasant"
+      "value": "Commoner"
     },
     {
       "trait_type": "Body",
-      "value": "Large Pointed Ear"
+      "value": "No Ear"
     },
     {
       "trait_type": "Eyes",
-      "value": "Light Blue"
+      "value": "Purple"
     },
     {
       "trait_type": "Hair",
-      "value": "Long Tied Hair"
+      "value": "Dreadlocks"
     },
     {
       "trait_type": "Chest",
-      "value": "Workers Shirt"
+      "value": "Jumpsuit"
     },
     {
       "trait_type": "Legs",
-      "value": "Green Robe"
+      "value": "Red Checked Pants"
     },
     {
       "trait_type": "Facial Hair",
@@ -52,35 +52,35 @@
     },
     {
       "trait_type": "Weapon Element",
-      "value": "Blood"
+      "value": "Earth"
     },
     {
       "trait_type": "HP",
-      "value": 11
+      "value": 19
     },
     {
       "trait_type": "AC",
-      "value": 15
-    },
-    {
-      "trait_type": "STR",
-      "value": 17
-    },
-    {
-      "trait_type": "DEX",
       "value": 12
     },
     {
+      "trait_type": "STR",
+      "value": 15
+    },
+    {
+      "trait_type": "DEX",
+      "value": 11
+    },
+    {
       "trait_type": "CON",
-      "value": 7
+      "value": 11
     },
     {
       "trait_type": "INT",
-      "value": 9
+      "value": 13
     },
     {
       "trait_type": "WIS",
-      "value": 15
+      "value": 10
     },
     {
       "trait_type": "CHA",
@@ -88,7 +88,7 @@
     },
     {
       "trait_type": "Coins",
-      "value": 567
+      "value": 521
     }
   ]
 }

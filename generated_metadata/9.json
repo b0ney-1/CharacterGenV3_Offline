@@ -1,31 +1,31 @@
 {
-  "name": "Draco Yaeger #9",
-  "description": "Draco Yaeger is a High Elf Knight, who has 4 sibling(s), and was born in the Home of a healer and rasied by an Orphanage. Draco Yaeger lives in the lower Isle of Zarkus, where he lives out his days as a Peasant. Draco Yaeger travelled in a caravan for a few months in his early teenage years. During this period he learned to play mutliple musical intruments.",
+  "name": "Anya Scardino #9",
+  "description": "Anya Scardino is a Halfling Cleric, who has 2 sibling(s), and was born in a Tower and rasied by an Orphanage. Anya Scardino lives in the lower Isle of Zarkus, where she lives out her days as a Folk Hero. Anya Scardino was proficient at card tricks and wished to learn real magic in order to improve her \"magic\" acts.",
   "image": "",
   "attributes": [
     {
       "trait_type": "Race",
-      "value": "High Elf"
+      "value": "Halfling"
     },
     {
       "trait_type": "Class",
-      "value": "Knight"
+      "value": "Cleric"
     },
     {
       "trait_type": "Sex",
-      "value": "Male"
+      "value": "Female"
     },
     {
       "trait_type": "Height",
-      "value": "180cm (5'11\")"
+      "value": "127cm (4'2\")"
     },
     {
       "trait_type": "Background",
-      "value": "Peasant"
+      "value": "Folk Hero"
     },
     {
       "trait_type": "Body",
-      "value": "Small Pointed Ear"
+      "value": "Small Ear"
     },
     {
       "trait_type": "Eyes",
@@ -33,11 +33,11 @@
     },
     {
       "trait_type": "Hair",
-      "value": "Short Flick"
+      "value": "Short Hair"
     },
     {
       "trait_type": "Chest",
-      "value": "Ragged Shirt"
+      "value": "Workers Shirt"
     },
     {
       "trait_type": "Legs",
@@ -45,42 +45,42 @@
     },
     {
       "trait_type": "Facial Hair",
-      "value": "Long Goatee"
+      "value": "none"
     },
     {
       "trait_type": "Weapon"
     },
     {
       "trait_type": "Weapon Element",
-      "value": "Lightning"
+      "value": "Water"
     },
     {
       "trait_type": "HP",
-      "value": 20
-    },
-    {
-      "trait_type": "AC",
-      "value": 11
-    },
-    {
-      "trait_type": "STR",
-      "value": 12
-    },
-    {
-      "trait_type": "DEX",
       "value": 17
     },
     {
-      "trait_type": "CON",
-      "value": 10
+      "trait_type": "AC",
+      "value": 13
     },
     {
-      "trait_type": "INT",
+      "trait_type": "STR",
       "value": 11
     },
     {
+      "trait_type": "DEX",
+      "value": 7
+    },
+    {
+      "trait_type": "CON",
+      "value": 12
+    },
+    {
+      "trait_type": "INT",
+      "value": 17
+    },
+    {
       "trait_type": "WIS",
-      "value": 6
+      "value": 15
     },
     {
       "trait_type": "CHA",
@@ -88,7 +88,7 @@
     },
     {
       "trait_type": "Coins",
-      "value": 467
+      "value": 383
     }
   ]
 }

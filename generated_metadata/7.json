@@ -1,15 +1,15 @@
 {
-  "name": "Bulruk Grell #7",
-  "description": "Bulruk Grell is a Halfling Rogue, who has 2 sibling(s), and was born in a Palace and rasied by a Mother and Father. Bulruk Grell lives in the upper Isle of Zenethia, where he lives out his days as a Peasant. Bulruk Grell would spend week nights playing his lute at the local tavern in return for food and a room to stay in.",
+  "name": "Zarek Kidder #7",
+  "description": "Zarek Kidder is a Orc Ranger, who has 2 sibling(s), and was born in a Barn and rasied by a Single Mother. Zarek Kidder lives in the upper Isle of Zenethia, where he lives out his days as a Peasant. Growing up he often went hunting and foraging and was taught essential survival skills.",
   "image": "",
   "attributes": [
     {
       "trait_type": "Race",
-      "value": "Halfling"
+      "value": "Orc"
     },
     {
       "trait_type": "Class",
-      "value": "Rogue"
+      "value": "Ranger"
     },
     {
       "trait_type": "Sex",
@@ -17,7 +17,7 @@
     },
     {
       "trait_type": "Height",
-      "value": "115cm (3'9\")"
+      "value": "153cm (5'0\")"
     },
     {
       "trait_type": "Background",
@@ -25,70 +25,70 @@
     },
     {
       "trait_type": "Body",
-      "value": "No Ear"
+      "value": "Small Ear"
     },
     {
       "trait_type": "Eyes",
-      "value": "Green"
+      "value": "Light Green"
     },
     {
       "trait_type": "Hair",
-      "value": "Comb Over"
+      "value": "Short Tied Hair"
     },
     {
       "trait_type": "Chest",
-      "value": "Leather Armor"
+      "value": "Green Shirt"
     },
     {
       "trait_type": "Legs",
-      "value": "Blue Lined Pants"
+      "value": "Blue Checked Pants"
     },
     {
       "trait_type": "Facial Hair",
-      "value": "Beard"
+      "value": "Long Goatee"
     },
     {
       "trait_type": "Weapon"
     },
     {
       "trait_type": "Weapon Element",
-      "value": "Curse"
+      "value": "Earth"
     },
     {
       "trait_type": "HP",
-      "value": 16
-    },
-    {
-      "trait_type": "AC",
-      "value": 13
-    },
-    {
-      "trait_type": "STR",
-      "value": 13
-    },
-    {
-      "trait_type": "DEX",
       "value": 12
     },
     {
+      "trait_type": "AC",
+      "value": 12
+    },
+    {
+      "trait_type": "STR",
+      "value": 9
+    },
+    {
+      "trait_type": "DEX",
+      "value": 7
+    },
+    {
       "trait_type": "CON",
-      "value": 11
+      "value": 9
     },
     {
       "trait_type": "INT",
-      "value": 14
+      "value": 10
     },
     {
       "trait_type": "WIS",
-      "value": 20
+      "value": 11
     },
     {
       "trait_type": "CHA",
-      "value": 18
+      "value": 14
     },
     {
       "trait_type": "Coins",
-      "value": 524
+      "value": 815
     }
   ]
 }

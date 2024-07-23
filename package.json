@@ -1,5 +1,5 @@
 {
-  "name": "character-generation-api",
+  "name": "charGen",
   "version": "1.0.0",
   "description": "Character Generator Project",
   "main": "server.js",
@@ -10,7 +10,7 @@
     "start": "node server.js",
     "watch": "nodemon server.js"
   },
-  "author": "ITsPorky",
+  "author": "Metaschool",
   "license": "ISC",
   "dependencies": {
     "@pinata/sdk": "^2.1.0",
