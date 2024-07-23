@@ -81,7 +81,7 @@ async function commitAndPush() {
     process.chdir(TEMP_DIR); // Ensure we are in the temp directory
     await git.add("./*"); // Add all files including folders
     await git.commit("Add generated images and metadata");
-    await git.push("origin", "main"); // Change 'main' to the desired branch if necessary
+    await git.push("origin", "master");
     console.log("Changes pushed to remote repository.");
   } catch (error) {
     console.error("Error committing or pushing files:", error.message);
