@@ -5,8 +5,8 @@ require("dotenv").config();
 
 const git = simpleGit();
 const TEMP_DIR = "./temp_upload";
-const IMAGE_DIR = "./generated_images";
-const METADATA_DIR = "./generated_metadata";
+const IMAGE_DIR = path.join(__dirname, "generated_images");
+const METADATA_DIR = path.join(__dirname, "generated_metadata");
 const REPO_URL = process.env.GIT_REPO_URL;
 
 // Function to initialize and configure the Git repository
@@ -49,13 +49,20 @@ async function initGitRepo() {
 // Function to copy the folders to the temp directory
 function copyFiles() {
   try {
+    // Log current working directory
+    console.log("Current working directory:", process.cwd());
+
+    console.log("Checking existence of directories...");
+    console.log("Image directory:", IMAGE_DIR);
+    console.log("Metadata directory:", METADATA_DIR);
+
     if (fs.existsSync(IMAGE_DIR)) {
       fs.cpSync(IMAGE_DIR, path.join(TEMP_DIR, "generated_images"), {
         recursive: true,
       });
       console.log("Copied images to temp directory.");
     } else {
-      console.log("Image directory does not exist.");
+      console.error("Image directory does not exist.");
     }
 
     if (fs.existsSync(METADATA_DIR)) {
@@ -64,7 +71,7 @@ function copyFiles() {
       });
       console.log("Copied metadata to temp directory.");
     } else {
-      console.log("Metadata directory does not exist.");
+      console.error("Metadata directory does not exist.");
     }
   } catch (error) {
     console.error("Error copying files:", error.message);
@@ -74,6 +81,7 @@ function copyFiles() {
 // Function to commit and push the changes
 async function commitAndPush() {
   try {
+    process.chdir(TEMP_DIR); // Ensure we are in the temp directory
     await git.add("./*"); // Add all files including folders
     await git.commit("Add generated images and metadata");
     await git.push("origin", "main"); // Change 'main' to the desired branch if necessary
