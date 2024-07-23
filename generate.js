@@ -3,11 +3,12 @@ const fs = require("fs");
 const { exec, execSync } = require("child_process");
 const cliProgress = require("cli-progress");
 const path = require("path");
+require("dotenv").config(); // Make sure to load .env file
 
 const PORT = 3030;
 const IMAGE_DIR = "./generated_images";
 const METADATA_DIR = "./generated_metadata"; // New directory for metadata files
-const NUMBER_OF_CARDS = 10;
+const NUMBER_OF_CARDS = 10000;
 const SERVER_START_COMMAND = "node server.js";
 
 function killProcessOnPort(port) {
@@ -91,6 +92,12 @@ async function generateCards() {
     fs.mkdirSync(METADATA_DIR);
   }
 
+  // Extract account name and repo name from GIT_REPO_URL
+  const gitRepoUrl = process.env.GIT_REPO_URL;
+  const [, accountName, repoName] = gitRepoUrl.match(
+    /github\.com\/([^/]+)\/([^/.]+)(?:\.git)?/
+  );
+
   // Initialize the progress bar
   const progressBar = new cliProgress.SingleBar(
     {},
@@ -115,7 +122,7 @@ async function generateCards() {
       const metadata = {
         name: `${metadataResponse.data.name} #${i}`,
         description: metadataResponse.data.description,
-        image: "", // Set image attribute to an empty string
+        image: `https://${accountName}.github.io/${repoName}/generated_images/${i}.png`, // Updated image URL
         attributes: [
           { trait_type: "Race", value: metadataResponse.data.race },
           { trait_type: "Class", value: metadataResponse.data.class },
