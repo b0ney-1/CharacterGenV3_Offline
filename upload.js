@@ -12,6 +12,7 @@ const REPO_URL = process.env.GIT_REPO_URL;
 // Function to initialize and configure the Git repository
 async function initGitRepo() {
   try {
+    // Create temp directory if it doesn't exist
     if (!fs.existsSync(TEMP_DIR)) {
       fs.mkdirSync(TEMP_DIR);
     }
@@ -64,7 +65,7 @@ function copyFiles() {
 // Function to commit and push the changes
 async function commitAndPush() {
   try {
-    await git.add("./*");
+    await git.add("./*"); // Add all files including folders
     await git.commit("Add generated images and metadata");
     await git.push("origin", "main"); // Change 'main' to the desired branch if necessary
     console.log("Changes pushed to remote repository.");
