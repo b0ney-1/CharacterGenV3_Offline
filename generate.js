@@ -7,7 +7,7 @@ const path = require("path");
 const PORT = 3030;
 const IMAGE_DIR = "./generated_images";
 const METADATA_DIR = "./generated_metadata"; // New directory for metadata files
-const NUMBER_OF_CARDS = 10000;
+const NUMBER_OF_CARDS = 10;
 const SERVER_START_COMMAND = "node server.js";
 
 function killProcessOnPort(port) {
@@ -98,7 +98,7 @@ async function generateCards() {
   );
   progressBar.start(NUMBER_OF_CARDS, 0);
 
-  for (let i = 0; i < NUMBER_OF_CARDS; i++) {
+  for (let i = 1; i <= NUMBER_OF_CARDS; i++) {
     const hexValue = ((Math.random() * 0xffffff) << 0)
       .toString(16)
       .padStart(6, "0");
@@ -111,23 +111,57 @@ async function generateCards() {
       });
       const metadataResponse = await axios.get(metadataUrl);
 
-      const imagePath = path.join(IMAGE_DIR, `${hexValue}.png`);
-      const metadataPath = path.join(METADATA_DIR, `${hexValue}.json`);
+      // Create the metadata object based on the template
+      const metadata = {
+        name: `${metadataResponse.data.name} #${i}`,
+        description: metadataResponse.data.description,
+        image: "", // Set image attribute to an empty string
+        attributes: [
+          { trait_type: "Race", value: metadataResponse.data.race },
+          { trait_type: "Class", value: metadataResponse.data.class },
+          { trait_type: "Sex", value: metadataResponse.data.sex },
+          { trait_type: "Height", value: metadataResponse.data.height },
+          {
+            trait_type: "Background",
+            value: metadataResponse.data.background.background,
+          },
+          { trait_type: "Body", value: metadataResponse.data.body.name },
+          { trait_type: "Eyes", value: metadataResponse.data.eyes.name },
+          { trait_type: "Hair", value: metadataResponse.data.hair.name },
+          { trait_type: "Chest", value: metadataResponse.data.chest.name },
+          { trait_type: "Legs", value: metadataResponse.data.legs.name },
+          {
+            trait_type: "Facial Hair",
+            value: metadataResponse.data.facialHair.name,
+          },
+          { trait_type: "Weapon", value: metadataResponse.data.weapon.name },
+          {
+            trait_type: "Weapon Element",
+            value: metadataResponse.data.weapon.elemental,
+          },
+          { trait_type: "HP", value: metadataResponse.data.hp },
+          { trait_type: "AC", value: metadataResponse.data.ac },
+          { trait_type: "STR", value: metadataResponse.data.str },
+          { trait_type: "DEX", value: metadataResponse.data.dex },
+          { trait_type: "CON", value: metadataResponse.data.con },
+          { trait_type: "INT", value: metadataResponse.data.int },
+          { trait_type: "WIS", value: metadataResponse.data.wis },
+          { trait_type: "CHA", value: metadataResponse.data.cha },
+          { trait_type: "Coins", value: metadataResponse.data.coins },
+        ],
+      };
+
+      const imagePath = path.join(IMAGE_DIR, `${i}.png`);
+      const metadataPath = path.join(METADATA_DIR, `${i}.json`);
 
       fs.writeFileSync(imagePath, imageResponse.data);
-      fs.writeFileSync(
-        metadataPath,
-        JSON.stringify(metadataResponse.data, null, 2)
-      );
+      fs.writeFileSync(metadataPath, JSON.stringify(metadata, null, 2));
     } catch (error) {
-      console.error(
-        `Failed to generate card ${i + 1}: ${hexValue}`,
-        error.message
-      );
+      console.error(`Failed to generate card ${i}: ${error.message}`);
     }
 
     // Update the progress bar
-    progressBar.update(i + 1);
+    progressBar.update(i);
   }
 
   // Stop the progress bar
