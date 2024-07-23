@@ -49,9 +49,6 @@ async function initGitRepo() {
 // Function to copy the folders to the temp directory
 function copyFiles() {
   try {
-    // Log current working directory
-    console.log("Current working directory:", process.cwd());
-
     console.log("Checking existence of directories...");
     console.log("Image directory:", IMAGE_DIR);
     console.log("Metadata directory:", METADATA_DIR);
